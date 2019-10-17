@@ -6,7 +6,7 @@ namespace CourseApp
     {
         public static double MyFunction(double a, double b, double x)
         {
-            var c = (b * x) + a;
+            var c = (b * x) + (a / x);
             return c;
         }
 
@@ -47,6 +47,8 @@ namespace CourseApp
         {
             Console.WriteLine("Hello World!");
             var taskA = TaskA(2, 3, 0, 5, 1);
+            Console.WriteLine(taskA);
+
             for (var i = 0; i < taskA.Length; i++)
             {
                 Console.WriteLine($"y={taskA[i]}");
