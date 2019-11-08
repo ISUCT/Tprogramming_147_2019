@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
     <NoWarn>1573,1591,1701;1702;1705;</NoWarn>
   </PropertyGroup>
 
@@ -18,6 +18,10 @@
 
   <ItemGroup>
     <AdditionalFiles Include="../_stylecop/stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="CourseApp.csproj" />
   </ItemGroup>
 
 </Project>

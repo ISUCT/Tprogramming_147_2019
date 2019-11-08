@@ -1,51 +1,39 @@
-<<<<<<< HEAD
 ﻿using System;
-
+ 
 namespace CourseApp
 {
     public class Program
     {
+            public static double Func(double b, double x)
+            {
+                 var y = (1 + Math.Pow(Math.Sin(Math.Pow(b, 5) + Math.Pow(x, 5)), 2)) / Math.Pow(Math.Pow(b, 3) + Math.Pow(x, 3), 0.33);
+                return y;
+            }
+        public static double[] TaskA(double b, double xn, double xk, double dx)
+        {
+            return new double[0];
+        }
+        public static double[] TaskB(double b, double[] x)
+        {
+            var y = new double[x.Length];
+            for (var i = 0; i < x.Length; i++)
+            {
+                y[i] = Func(b, x[i]);
+            }
+            return y;
+        }
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadLine();
+            const float b = 2.5f;
+            var resultTaskA = Func(b, 4);
+            Console.WriteLine($"Answer Task A = {resultTaskA}");
+            var x = new double[] { 1.1, 2.4, 3.6, 1.7, 3.9 };
+            var resultTaskB = TaskB(b, x);
+            Console.WriteLine($"Answer Task B:");
+                foreach (var res in resultTaskB)
+                {
+                    Console.WriteLine($"y= {res}");
+                }
         }
     }
 }
-=======
-﻿//Вариант 20
-using System;
-
-namespace CourseApp
-{
-    class Program
-    {
-        static double Func(double z,float a,float b)
-        {
-            return ((Math.Pow((z - a), 2.0 / 3) + Math.Pow(Math.Abs(z + b), 1.0 / 5)) / (Math.Pow(z * z - (a + b) * (a + b), 1.0 / 9)));
-        }
-
-        static void Main()
-        {
-            float a = 0.8f;
-            float b = 0.4f;
-             
-            Console.WriteLine("Задание a)");
-            for (float x = 1.23f; x <= 7.23f; x += 1.2f)
-            {
-                Console.WriteLine($" x={x} y={Func(x,a,b)}");
-            }
-            Console.WriteLine();
-            
-            Console.WriteLine(" Задание  b)");
-            double[] Xm = new double[5] { 1.88, 2.26, 3.84, 4.55, 6.21 };
-            foreach (double i in Xm)
-            {
-                
-                Console.WriteLine($" X={i} y={Func(i,a,b)} ");
-            }
-            Console.ReadLine();
-        }
-    }
-}
->>>>>>> master
