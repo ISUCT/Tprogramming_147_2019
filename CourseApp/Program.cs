@@ -6,7 +6,7 @@ namespace CourseApp
     {
             public static double Func(double b, double x)
             {
-                 var y = (1 + Math.Pow(Math.Sin(Math.Pow(b, 5) + Math.Pow(x, 5)), 2)) / Math.Pow(Math.Pow(b, 3) + Math.Pow(x, 3), 1/3f);
+                 var y = (1 + Math.Pow(Math.Sin(Math.Pow(b, 3) + Math.Pow(x, 3)), 2)) / Math.Pow(Math.Pow(b, 3) + Math.Pow(x, 3), 1/3f);
                 return y;
             }
         public static double[] TaskA(double b, double xn, double xk, double dx)
