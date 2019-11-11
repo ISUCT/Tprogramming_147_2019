@@ -13,7 +13,7 @@ namespace CourseApp
         {
 			int i = 0;
 			double z = Math.Round((xk - xn) / dx);
-			var y = new double[(int)k];
+			var y = new double[(int)z];
 			for (double x = xn; x < xk; x += dx)
 			{
 				y[i] = Func(b, x);
