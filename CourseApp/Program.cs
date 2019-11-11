@@ -16,7 +16,7 @@ namespace CourseApp
 			var y = new double[(int)k];
 			for (double x = xn; x < xk; x += dx)
 			{
-				y[i] = Matem(b, x);
+				y[i] = Func(b, x);
 				i++;
 			}
 			return y;
