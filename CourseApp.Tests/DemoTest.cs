@@ -40,7 +40,7 @@ namespace CourseApp.Tests
         {
             var x = new double[] { 1.1, 2.4, 3.6, 1.7, 3.9 };
             var res = Program.TaskB(2.5, x);
-            var expy = new double[] { 0.7393337604442745, 0.5994378111111899, 0.3213942702069994, 0.7252847867830982, 0.2828468929959897 };
+            var expy = new double[] { 0.739333760444302, 0.599437811110944, 0.321394270206876, 0.725284786782826, 0.282846892996087 };
             for (int i = 0; i < 5; i++)
             {
                 Xunit.Assert.Equal(expy[i], res[i], 3);
