@@ -5,24 +5,45 @@ namespace CourseApp.Tests
 {
     public class DemoTest
     {
-        [Fact]
-        public void Test1()
+        [Theory]
+        [InlineData(0.7, 5, 0.290669706554148)]
+        [InlineData(1, 5, 0.2053945770368)] 
+        public void TestFunction(double b, double x, double exp)
         {
-            Assert.True(true);
+            Assert.Equal(Program.Func(b, x), exp, 3);
         }
 
         [Fact]
-        public void TestSummPositive()
+        public void StartTest()
         {
-            var res = Program.Summ(2, 3);
-            Assert.Equal(5, res);
+            Xunit.Assert.True(true);
         }
 
         [Fact]
-        public void TestSummPositiveNegative()
+        public void ZeroFunction()
         {
-            var actualRes = Program.Summ(-2, 2);
-            Assert.Equal(0, actualRes);
+            var res = Program.Matem(0.0, 0.0);
+            Xunit.Assert.Equal(double.PositiveInfinity, res);
+        }
+
+        [Fact]
+        public void NullMassTest()
+        {
+            var mass = new double[0];
+            var res = Program.TaskB(2, mass);
+            Xunit.Assert.Equal(mass, res);
+        }
+
+        [Fact]
+        public void TestTaskB()
+        {
+            var x = new double[] { 1.1, 2.4, 3.6, 1.7, 3.9 };
+            var res = Program.TaskB(2.5, x);
+            var expy = new double[] { 0.750082078454372, 0.639743913195054, 0.504058298008105, 0.699366948598495, 0.381615534970301 };
+            for (int i = 0; i < 5; i++)
+            {
+                Xunit.Assert.Equal(expy[i], res[i], 3);
+            }
         }
     }
 }

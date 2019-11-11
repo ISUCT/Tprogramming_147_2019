@@ -11,7 +11,15 @@ namespace CourseApp
             }
         public static double[] TaskA(double b, double xn, double xk, double dx)
         {
-            return new double[0];
+			int i = 0;
+			double z = Math.Round((xk - xn) / dx);
+			var y = new double[(int)k];
+			for (double x = xn; x < xk; x += dx)
+			{
+				y[i] = Matem(b, x);
+				i++;
+			}
+			return y;
         }
         public static double[] TaskB(double b, double[] x)
         {
@@ -24,15 +32,21 @@ namespace CourseApp
         }
         public static void Main(string[] args)
         {
-            const float b = 2.5f;
-            var resultTaskA = Func(b, 4);
-            Console.WriteLine($"Answer Task A = {resultTaskA}");
+			double xn = 1.280;
+			double xk = 3.280;
+			double dx = 0.4;
+			double b = 2.5;
+			Console.WriteLine("Answer Task A:");
+			   foreach (var item in TaskA(b, xn, xk, dx))
+			    {
+			     	Console.WriteLine($"y = {item}");
+			    }
             var x = new double[] { 1.1, 2.4, 3.6, 1.7, 3.9 };
             var resultTaskB = TaskB(b, x);
             Console.WriteLine($"Answer Task B:");
-                foreach (var res in resultTaskB)
+                foreach (var item in resultTaskB)
                 {
-                    Console.WriteLine($"y= {res}");
+                    Console.WriteLine($"y= {item}");
                 }
         }
     }
