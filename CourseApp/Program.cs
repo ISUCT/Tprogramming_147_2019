@@ -6,17 +6,17 @@ namespace CourseApp
     {
             public static double Func(double b, double x)
             {
-                 var y = (1 + Math.Pow(Math.Sin(Math.Pow(b, 5) + Math.Pow(x, 5)), 2)) / Math.Pow(Math.Pow(b, 3) + Math.Pow(x, 3), 0.33);
+                 var y = (1 + Math.Pow(Math.Sin(Math.Pow(b, 3) + Math.Pow(x, 3)), 2)) / Math.Pow(Math.Pow(b, 3) + Math.Pow(x, 3), 1/3f);
                 return y;
             }
         public static double[] TaskA(double b, double xn, double xk, double dx)
         {
 			int i = 0;
 			double z = Math.Round((xk - xn) / dx);
-			var y = new double[(int)k];
+			var y = new double[(int)z];
 			for (double x = xn; x < xk; x += dx)
 			{
-				y[i] = Matem(b, x);
+				y[i] = Func(b, x);
 				i++;
 			}
 			return y;

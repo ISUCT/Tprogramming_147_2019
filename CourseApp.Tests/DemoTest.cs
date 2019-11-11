@@ -6,8 +6,9 @@ namespace CourseApp.Tests
     public class DemoTest
     {
         [Theory]
-        [InlineData(0.7, 5, 0.290669706554148)]
-        [InlineData(1, 5, 0.2053945770368)] 
+        [InlineData(0.7, 5, 0.2196741002474553)]
+        [InlineData(2.2, 1.7, 0.4091366343551351)] 
+        [InlineData(0.1, 4, 0.4617896586816621)]
         public void TestFunction(double b, double x, double exp)
         {
             Assert.Equal(Program.Func(b, x), exp, 3);
@@ -39,7 +40,7 @@ namespace CourseApp.Tests
         {
             var x = new double[] { 1.1, 2.4, 3.6, 1.7, 3.9 };
             var res = Program.TaskB(2.5, x);
-            var expy = new double[] { 0.750082078454372, 0.639743913195054, 0.504058298008105, 0.699366948598495, 0.381615534970301 };
+            var expy = new double[] { 0.739333760444302, 0.599437811110944, 0.321394270206876, 0.725284786782826, 0.282846892996087 };
             for (int i = 0; i < 5; i++)
             {
                 Xunit.Assert.Equal(expy[i], res[i], 3);
