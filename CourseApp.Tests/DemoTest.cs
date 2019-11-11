@@ -6,8 +6,9 @@ namespace CourseApp.Tests
     public class DemoTest
     {
         [Theory]
-        [InlineData(0.7, 5, 0.290669706554148)]
-        [InlineData(1, 5, 0.2053945770368)] 
+        [InlineData(0.7, 5, 0.2196741002474553)]
+        [InlineData(2.2, 1.7, 0.4091366343551351)] 
+        [InlineData(0.1, 4, 0.4617896586816621)]
         public void TestFunction(double b, double x, double exp)
         {
             Assert.Equal(Program.Func(b, x), exp, 3);
