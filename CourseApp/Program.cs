@@ -36,7 +36,7 @@ namespace CourseApp
 			double xk = 3.280;
 			double dx = 0.4;
 			double b = 2.5;
-			Console.WriteLine("Answer Task A:");
+			Console.WriteLine("Answer Task A :");
 			   foreach (var item in TaskA(b, xn, xk, dx))
 			    {
 			     	Console.WriteLine($"y = {item}");
