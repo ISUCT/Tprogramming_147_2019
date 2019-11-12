@@ -23,7 +23,7 @@ namespace CourseApp.Tests
         [Fact]
         public void ZeroFunction()
         {
-            var res = Program.Matem(0.0, 0.0);
+            var res = Program.Func(0.0, 0.0);
             Xunit.Assert.Equal(double.PositiveInfinity, res);
         }
 
