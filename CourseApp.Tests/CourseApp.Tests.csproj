@@ -1,17 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-<<<<<<< HEAD
-    <TargetFramework>netcoreapp3.0</TargetFramework>
-    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <NoWarn>1573,1591,1701;1702;1705</NoWarn>
     <IsPackable>false</IsPackable>
-=======
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <NoWarn>1573,1591,1701;1702;1705;</NoWarn>
->>>>>>> ec5c050b55982bb7b253a3bd26a326b57a769fcd
   </PropertyGroup>
 
    <ItemGroup>
