@@ -4,15 +4,13 @@ namespace CourseApp
 {
     public class Program
     {
-        public static double MyFunction(double a, double b, double x)
+        public static double MyFunction(double x)
         {
-            var c = (b * x) + (a / x);
+            var c = (Math.Pow(Math.Sin(x), 3) + Math.Pow(Math.Cos(x), 3)) * Math.Log10(x);
             return c;
         }
 
         public static double[] TaskA (
-                                     double a,
-                                     double b,
                                      double xn,
                                      double xk,
                                      double dx)
@@ -22,7 +20,7 @@ namespace CourseApp
             var i = 0;
             for (var x = xn; x < xk; x += dx)
             {
-                y[i] = MyFunction(a, b, x);
+                y[i] = MyFunction(x);
                 i++;
             }
 
@@ -30,14 +28,12 @@ namespace CourseApp
         }
 
         public static double[] TaskB (
-                                 double a,
-                                 double b,
                                  double[] x)
         {
             var y = new double[x.Length];
             for (int i = 0; i < x.Length; i++)
             {
-                y[i] = MyFunction(a, b, x[i]);
+                y[i] = MyFunction(x[i]);
             }
 
             return y;
@@ -46,7 +42,7 @@ namespace CourseApp
         public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            var taskA = TaskA(2, 3, 0, 5, 1);
+            var taskA = TaskA(0.11, 0.36, 0.05);
             Console.WriteLine(taskA);
 
             for (var i = 0; i < taskA.Length; i++)
@@ -54,8 +50,8 @@ namespace CourseApp
                 Console.WriteLine($"y={taskA[i]}");
             }
 
-            var xB = new double[] { 0, 1, 2, 3 };
-            var taskB = TaskB(2, 3, xB);
+            var xB = new double[] { 0.2, 0.3, 0.38, 0.43, 0.57 };
+            var taskB = TaskB(xB);
             for (var i = 0; i < xB.Length; i++)
             {
                 Console.WriteLine($"x={xB[i]} y={taskB[i]}");
