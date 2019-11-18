@@ -2,7 +2,7 @@
 
 namespace CourseApp
 {
-    public class Program
+    public class Function
     {
         public static double MyFunction(double x)
         {
