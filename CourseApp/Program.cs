@@ -31,19 +31,29 @@ namespace CourseApp
              double xk = 4.2;
              double dx = 0.6;
             var resA = TaskA(a, xn, xk, dx);
+            Console.WriteLine("==========");
             Console.WriteLine("Задание А:");
+            Console.WriteLine("==========");
             foreach (var item in resA)
                 {
                     Console.WriteLine($"y = {item}");
                 }
-                
+            Console.WriteLine("==========");    
             var x = new double[] { 1.16, 1.32, 1.47, 1.65, 1.93 };
             var taskBRes = TaskB(a, x);
             Console.WriteLine("Задание В:");
+            Console.WriteLine("==========");
             foreach (var item in taskBRes)
                 {
                     Console.WriteLine($"y1 = {item}");
                 }
+            Console.WriteLine("==========");
+            Console.WriteLine("My first class in C#");
+
+            Dog snech = new Dog();
+            snech.GetInfo();
+            Console.WriteLine(snech.GetVoice());
+            Console.WriteLine(snech.GetPicture());
             Console.ReadLine();
         }
     }
