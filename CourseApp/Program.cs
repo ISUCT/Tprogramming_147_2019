@@ -4,40 +4,27 @@ namespace CourseApp
 {
     public class Program
     {
-        public static double MyFunction(double a, double b, double x)
+        public static double[] TaskA(double a, double xn, double xk, double dx)
         {
-            var c = (b * x) + (a / x);
-            return c;
-        }
+            int j = 0;
+            var y = new double[5];
 
-        public static double[] TaskA (
-                                     double a,
-                                     double b,
-                                     double xn,
-                                     double xk,
-                                     double dx)
-        {
-            var steps = (int)Math.Floor((xk - xn) / dx);
-            var y = new double[steps];
-            var i = 0;
-            for (var x = xn; x < xk; x += dx)
+            for (var i = xn; i < xk; i += dx)
             {
-                y[i] = MyFunction(a, b, x);
-                i++;
+                y[j] = Math.Pow(Math.Log10(a + i), 2) / Math.Pow(a + i, 2);
+                j++;
             }
 
             return y;
         }
 
-        public static double[] TaskB (
-                                 double a,
-                                 double b,
-                                 double[] x)
+        public static double[] TaskB(double a, double[] x)
         {
             var y = new double[x.Length];
-            for (int i = 0; i < x.Length; i++)
+
+            for (var i = 0; i < y.Length; i++)
             {
-                y[i] = MyFunction(a, b, x[i]);
+                y[i] = Math.Pow(Math.Log10(a + x[i]), 2) / Math.Pow(a + x[i], 2);
             }
 
             return y;
@@ -45,26 +32,25 @@ namespace CourseApp
 
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            var taskA = TaskA(2, 3, 0, 5, 1);
-            Console.WriteLine(taskA);
+            const double a = 2.0;
+            const double xn = 1.2;
+            const double xk = 4.2;
+            const double dx = 0.6;
 
-            for (var i = 0; i < taskA.Length; i++)
+            var resultTaskA = TaskA(a, xn, xk, dx);
+            Console.WriteLine("Task A:");
+            foreach (var item in resultTaskA)
             {
-                Console.WriteLine($"y={taskA[i]}");
+                Console.WriteLine($"y = {item}");
             }
 
-            var xB = new double[] { 0, 1, 2, 3 };
-            var taskB = TaskB(2, 3, xB);
-            for (var i = 0; i < xB.Length; i++)
+            var x = new double[] { 1.16, 1.32, 1.47, 1.65, 1.93 };
+            var resultTaskB = TaskB(a, x);
+            Console.WriteLine("Task B:");
+            foreach (var item in resultTaskB)
             {
-                Console.WriteLine($"x={xB[i]} y={taskB[i]}");
+                Console.WriteLine($"y = {item}");
             }
-
-            var item = new Platypus();
-            Console.WriteLine(item.View());
-
-            Console.ReadLine();
         }
     }
 }
