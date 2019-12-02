@@ -59,9 +59,6 @@ namespace CourseApp
                 Console.WriteLine($"x={xB[i]} y={taskB[i]}");
             }
 
-            var item = new Platypus();
-            Console.WriteLine(item.View());
-
             Console.ReadLine();
         }
     }
