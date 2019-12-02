@@ -61,7 +61,7 @@ namespace CourseApp
 
         public override string ToString()
         {
-            return $"Pistil-{Model}, {Kalibr}, {Fire}";
+            return $"Pistol-{Model}, {Kalibr}, {Fire}";
         }
 
         public string NumShoot(int shot)
