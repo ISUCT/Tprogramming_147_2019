@@ -7,6 +7,7 @@ namespace CourseApp
         public static double MyFunction(double x)
         {
             var c = (Math.Pow(Math.Sin(x), 3) + Math.Pow(Math.Cos(x), 3)) * Math.Log10(x);
+            Console.WriteLine(c);
             return c;
         }
 
@@ -41,6 +42,7 @@ namespace CourseApp
 
         public static void Main(string[] args)
         {
+            MyFunction(0);
             Console.WriteLine("Hello World!");
             var taskA = TaskA(0.11, 0.36, 0.05);
             Console.WriteLine(taskA);
