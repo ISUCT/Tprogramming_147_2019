@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace CourseApp.Tests
@@ -28,7 +29,7 @@ namespace CourseApp.Tests
         [Fact]
         public void TestZeroLengthB()
         {
-            var res = Program.TaskB(1, 1, new double[0]);
+            var res = Program.TaskB(1, 1, new List<double>());
             Assert.Empty(res);
         }
     }
