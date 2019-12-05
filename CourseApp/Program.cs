@@ -11,7 +11,7 @@ namespace CourseApp
             return c;
         }
 
-        public static double[] TaskA(
+        public static List<double> TaskA(
         double a,
         double b,
         double xn,
@@ -19,11 +19,11 @@ namespace CourseApp
         double dx)
         {
             var steps = (int)Math.Floor((xk - xn) / dx);
-            var y = new double[steps];
+            var y = new List<double>();
             var i = 0;
             for (var x = xn; x < xk; x += dx)
             {
-                y[i] = MyFunction(a, b, x);
+                y.Add(MyFunction(a, b, x));
                 i++;
             }
 
@@ -49,7 +49,7 @@ namespace CourseApp
             var taskA = TaskA(0.05, 0.06, 0.2, 0.95, 0.15);
             Console.WriteLine(taskA);
 
-            for (var i = 0; i < taskA.Length; i++)
+            for (var i = 0; i < taskA.Count; i++)
             {
                 Console.WriteLine($"y={taskA[i]}");
             }
@@ -58,9 +58,9 @@ namespace CourseApp
             const double b = 0;
             var xB = new List<double> { 0.15, 0.26, 0.37, 0.48, 0.53 };
             var taskB = TaskB(a, b, xB);
-            foreach (var res in taskB)
+           for (var i = 0; i < taskB.Count; i++)
             {
-                Console.WriteLine($"y={res}");
+                Console.WriteLine($"x={xB[i]} y={taskB[i]}");
             }
 
             var item = new Platypus();
