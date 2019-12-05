@@ -1,107 +1,54 @@
 using System;
 using Xunit;
-using CourseApp;
 
 namespace CourseApp.Tests
 {
     public class PigTest
     {
-        
         [Fact]
-        public void PigTest1()
+        public void TestEmptyConstructor()
         {
-            Pig svin = new Pig();
-            var resAge = svin.Age;
-            var resSalo = svin.Salo;
-            var resSex = svin.Sex;
-            Assert.Equal(20, resAge);
-            Assert.Equal(70.0f, resSalo);
-            Assert.Equal("Male", resSex);
+            var item = new Pig();
+            Assert.Equal(1, item.Age);
+            Assert.Equal("Test", item.Name);
+            Assert.Equal(1, item.Salo);
+            Assert.Equal("male", item.Gender);
+        }
+
+        [Theory]
+        [InlineData("PigMan", 5, 7,"male")]
+        [InlineData("PigGirl", 2, 1,"female")]
+        [InlineData("PigPigger", 10, 11,"male")]
+        public void TestFullConstructor(string name, int age, int salo, string gender)
+        {
+            var item = new Pig(name, age, salo, gender);
+            Assert.Equal(age, item.Age);
+            Assert.Equal(name, item.Name);
+            Assert.Equal(salo, item.Salo);
+            Assert.Equal(gender, item.Gender);
         }
 
         [Fact]
-        public void PigTest2()
+        public void TestRightSetAge()
         {
-            Pig svin = new Pig("Male");
-            var resAge = svin.Age;
-            var resSalo = svin.Salo;
-            Assert.Equal(20, resAge);
-            Assert.Equal(70.0f, resSalo);
+            var item = new Pig();
+            item.Age = 11;
+            Assert.Equal(11, item.Age);
         }
 
         [Fact]
-        public void PigTest3()
+        public void TestWrongSetAge()
         {
-            Pig svin = new Pig("Female");
-            var resAge = svin.Age;
-            var resSalo = svin.Salo;
-            Assert.Equal(15, resAge);
-            Assert.Equal(45.0f, resSalo);
-        }
-
-        [Fact]
-        public void PigTest4()
-        {
-            Pig svin = new Pig(57.5f);
-            var resAge = svin.Age;
-            var resSex = svin.Sex;
-            Assert.Equal(20, resAge);
-            Assert.Equal("Male", resSex);
-        }
-
-        [Fact]
-        public void PigTest5()
-        {
-            Pig svin = new Pig(37.5f);
-            var resAge = svin.Age;
-            var resSex = svin.Sex;
-            Assert.Equal(15, resAge);
-            Assert.Equal("Female", resSex);
-        }
-
-        [Fact]
-        public void PigTest6()
-        {
-            Pig svin = new Pig(17);
-            var resSalo = svin.Salo;
-            var resSex = svin.Sex;
-            Assert.Equal(65.0f, resSalo);
-            Assert.Equal("Male", resSex);
-        }
-
-        [Fact]
-        public void PigTest7()
-        {
-            Pig svin = new Pig(8);
-            var resSalo = svin.Salo;
-            var resSex = svin.Sex;
-            Assert.Equal(45.0f, resSalo);
-            Assert.Equal("Female", resSex);
-        }
-
-        [Fact]
-        public void PigTest8()
-        {
-            Pig svin = new Pig();
-            var resRis = svin.Image();
-            Assert.Equal(
-                @"       _       
-      (_)      
- _ __  _  __ _ 
-| '_ \| |/ _` |
-| |_) | | (_| |
-| .__/|_|\__, |
-| |       __/ |
-|_|      |___/ 
-", resRis);
-        }
-
-        [Fact]
-        public void PigTest9()
-        {
-            Pig svin = new Pig();
-            var resDirt = svin.Dirt();
-            Assert.Equal($"свинья возраста {20} пошла поваляться в грязи  ", resDirt);
+            try
+            {
+                var item = new Pig();
+                item.Age = -1000;
+            }
+            catch (System.Exception)
+            {
+                Console.WriteLine("Возраст должен быть больше 1 года");
+                Assert.True(true);
+            }       
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
  
 namespace CourseApp
 {
@@ -9,24 +10,23 @@ namespace CourseApp
                  var y = (1 + Math.Pow(Math.Sin(Math.Pow(b, 3) + Math.Pow(x, 3)), 2)) / Math.Pow(Math.Pow(b, 3) + Math.Pow(x, 3), 1/3f);
                 return y;
             }
-        public static double[] TaskA(double b, double xn, double xk, double dx)
+        public static List<double> TaskA(double b, double xn, double xk, double dx)
         {
 			int i = 0;
-			double z = Math.Round((xk - xn) / dx);
-			var y = new double[(int)z];
+			List<double> y = new List<double>();
 			for (double x = xn; x < xk; x += dx)
 			{
-				y[i] = Func(b, x);
+				y.Add(Func(b, x));
 				i++;
 			}
 			return y;
         }
-        public static double[] TaskB(double b, double[] x)
+        public static List<double> TaskB(double b, List<double> x)
         {
-            var y = new double[x.Length];
-            for (var i = 0; i < x.Length; i++)
+            List <double> y = new List<double>();
+            for (var i = 0; i < x.Count; i++)
             {
-                y[i] = Func(b, x[i]);
+                y.Add(Func(b, x[i]));
             }
             return y;
         }
@@ -41,7 +41,7 @@ namespace CourseApp
 			    {
 			     	Console.WriteLine($"y = {item}");
 			    }
-            var x = new double[] { 1.1, 2.4, 3.6, 1.7, 3.9 };
+            List <double> x = new List<double> { 1.1, 2.4, 3.6, 1.7, 3.9 };
             var resultTaskB = TaskB(b, x);
             Console.WriteLine($"Answer Task B:");
                 foreach (var item in resultTaskB)

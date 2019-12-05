@@ -1,87 +1,96 @@
 using System;
+using System.Collections.Generic;
 
 namespace CourseApp
 {
     public class Pig
     {
+        private int salo;
+        private int age;
+        private string gender;
+        public string Name { get; set; }
         public Pig()
+        : this("Test")
         {
-            Sex = "Male";
-            Age = 20;
-            Salo = 70.0f;
-        }
-        public Pig(string n)
-        {
-            Sex = n;
-            if (Sex == "Female")
-            {
-                Age = 15;
-                Salo = 45.0f;
-            }
-            else
-            {
-                Age = 20;
-                Salo = 70.0f;
-            }
-        }
-        public Pig(float s)
-        {
-            Salo = s;
-            if (Salo <= 70.0f && Salo > 45.0f)
-            {
-                Sex = "Male";
-                Age = 20;
-            }
-
-            if (Salo <= 45.0f && Salo >= 30.0f)
-            {
-                Sex = "Female";
-                Age = 15;
-            }
-
-            if (Salo < 30.0f || Salo > 70.0f)
-            {
-                Console.WriteLine("ОШИБКА!Вес должен попадать в диапазон от 30 до 70");
-                throw new Exception();
-            }
         }
 
-        public Pig(int a)
+        public Pig(string name)
+        : this(name, 1,"male")
         {
-            Age = a;
-            if (Age > 15 && Age <= 20)
+        }
+
+        public Pig(string name, int age, string gender)
+        : this(name, age, 1, "male")
+        {
+        }
+        
+        public Pig(string name, int age, int salo, string gender)
+        {
+            Name = name;
+            Age = age;
+            Salo = salo;
+            Gender = gender;
+        }
+
+        public int Age
+        {
+            get
             {
-                Sex = "Male";
-                Salo = 65.0f;
+                return this.age;
+            }
+            set
+            {
+                if (value >= 1 && value <= 15)
+                {
+                    this.age = value;
+                }
+                else
+                {
+                    Console.WriteLine("Возраст свиньи должен быть менее 15.");
+                }
+            }
+        }
+        public string Gender
+        {
+            get
+            {
+                return this.gender;
+            }
+            set
+            {
+                if (value == "male" || value == "female")
+                {
+                    this.gender = value;
+                }
+                else
+                {
+                    throw new System.Exception();
+                }
+            }
+        }
+        public int Salo
+        {
+            get
+            {
+                return this.salo;
             }
 
-            if (Age <= 15 && Age > 1)
+            set
             {
-                Sex = "Female";
-                Salo = 45.0f;
-            }
-
-            if (Age < 1 || Age > 20)
-            {
-                Console.WriteLine("ОШИБКА!Возраст должен попадать в диапазон от 1 до 20");
-                throw new Exception();
+                if (value >= 0)
+                {
+                    this.salo = value;
+                }
+                else
+                {
+                throw new System.Exception();
+                }
             }
         }
 
-        public float Salo { get; set; }
-        public int Age { get; set; }
-        public string Sex { get; set; }
-        public void Info()
+        public override string ToString()
         {
-            Console.WriteLine($"Пол: {Sex}  Возраст: {Age}  Масса сало: {Salo}");
-            Console.WriteLine(Dirt());
-        }
-        public string Dirt()
-        {
-            return $"свинья возраста {Age} пошла поваляться в грязи  ";
-        }
-        public string Image()
-        {
+            return $"Имя:{Name},Возраст:{Age},Cало:{Salo}";
             return @"       _       
       (_)      
  _ __  _  __ _ 
@@ -91,6 +100,14 @@ namespace CourseApp
 | |       __/ |
 |_|      |___/ 
 ";
+        }
+        public void Aging()
+        {
+            this.age++;
+        }
+        public void LostSalo()
+        {
+            this.salo--;
         }
     }
 }
