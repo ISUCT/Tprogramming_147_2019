@@ -1,53 +1,63 @@
 using System;
 using Xunit;
-using CourseApp;
 
 namespace CourseApp.Tests
 {
-    public class UnitTest2
+    public class DogTest
     {
         [Fact]
-        public void Test4()
+        public void TestConstructor()
         {
-           Dog snech = new Dog();
-            
-            Assert.Equal(15, snech.Age);
-            Assert.Equal(50.0f, snech.Weight);
-            Assert.Equal("K", snech.Pol);
+            var item = new Dog();
+            Assert.Equal(1, item.Age);
+            Assert.Equal("Test", item.Name);
+            Assert.Equal("male", item.Sex);
         }
 
         [Fact]
-        public void Test5()
+        public void TestSetAge()
         {
-            Dog snech = new Dog("S");
-            Assert.Equal(12, snech.Age);
-            Assert.Equal(45.0f, snech.Weight);
+            var item = new Dog();
+            item.Age = 3;
+            Assert.Equal(3, item.Age);
         }
 
         [Fact]
-        public void Test6()
+        public void TestWrongAge()
         {
-            Dog snech = new Dog("K");
-            Assert.Equal(14, snech.Age);
-            Assert.Equal(50.0f, snech.Weight);
+        var item = new Dog();
+        try
+            {
+                item.Age = 0;
+            }
+        catch (System.Exception)
+            {
+                Console.WriteLine("ERROR! Rewrite Age!");
+                Assert.True(true);
+            }
         }
 
         [Fact]
-        public void Test7()
+        public void TestWrongSex()
         {
-            Dog snech = new Dog();
-            Assert.Equal(
-                @"  __      _
-o'')}____//
- `_/      )
- (_(_/-(_/", snech.GetPicture());
+        var item = new Dog();
+        try
+            {
+                item.Sex = "lemonade";
+            }
+        catch (System.Exception)
+            {
+                Console.WriteLine("ERROR! Rewrite Sex!");
+                Assert.True(true);
+            }
         }
-
         [Fact]
-        public void Test8()
+        public void FullTest()
         {
-            Dog snech = new Dog();
-            Assert.Equal($"собака возраста {15} подала голос гав-гав ", snech.GetVoice());
+            var item = new Dog("Doberman", 3, "male");
+            Assert.Equal("Doberman", item.Name);
+            Assert.Equal("male", item.Sex);
+            Assert.Equal(3, item.Age);
         }
     }
 }

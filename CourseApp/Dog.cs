@@ -1,52 +1,71 @@
 using System;
+using System.Collections.Generic;
 
 namespace CourseApp
 {
     public class Dog
     {
+        private int age;
+        private string sex;
+        public string Name { get; set; }
         public Dog()
+        : this("Test")
         {
-            Pol = "K";
-            Age = 15;
-            Weight = 50.0f;
         }
-
-        public Dog(string n)
+        public string Sex
         {
-            Pol = n;
-            if (Pol == "S")
+            get
             {
-                Age = 12;
-                Weight = 45.0f;
+                return this.sex;
             }
-            else
+            set
             {
-                Age = 14;
-                Weight = 50.0f;
+                if (value == "male")
+                {
+                    this.sex = value;
+                }
+                else
+                {
+                    throw new System.Exception();
+                }
             }
         }
-        public float Weight { get; set; }
-
-        public int Age { get; set; }
-
-        public string Pol { get; set; }
-
-        public void GetInfo()
+        public Dog(string name, int age, string sex)
         {
-            Console.WriteLine($"Пол: {Pol} Возраст: {Age} Вес: {Weight}");
+            Name = name;
+            Age = age;
+            Sex = sex;
         }
-
-        public string GetVoice()
+        public Dog(string name)
+        : this(name, 1, "male")
         {
-            return $"собака возраста {Age} подала голос гав-гав ";
         }
-
-        public string GetPicture()
+        public int Age
         {
-            return @"  __      _
-o'')}____//
- `_/      )
- (_(_/-(_/";
+            get
+            {
+                return this.age;
+            }
+
+            set
+            {
+                if (value >= 1 && value < 10)
+                {
+                    this.age = value;
+                }
+                else
+                {
+                    throw new System.Exception();
+                }
+            }
+        }
+         public override string ToString()
+        {
+            return $"Имя:{Name},Возраст:{Age},Пол:{Sex}";
+        }
+        public void AgeUp()
+        {
+            this.age++;
         }
     }
 }
