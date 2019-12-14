@@ -45,5 +45,12 @@ namespace CourseApp.Tests
                 Assert.Equal(expy[i], res[i], 3);
             }
         }
+
+        [Fact]
+        public void XnMoreThanXkAndUncorrectDx()
+        {
+            List<double> res = Program.TaskA(1.6, 3.7, 1.2, 0.7);
+            Assert.Equal(res, new List<double>());
+        }
     }
 }

@@ -38,6 +38,24 @@ namespace CourseApp.Tests
         }
 
         [Fact]
+        public void TestCorrectIncorrectSetAge()
+        {
+            var item = new Person();
+            item.Age = 27;
+            try
+            {
+                item.Age = -1;
+            }
+            catch
+            {
+                Assert.Equal(27, item.Age);
+                return;
+            }
+
+            Assert.Equal(27, item.Age);
+        }
+
+        [Fact]
         public void TestIncorrectSetString()
         {
             var item = new Person();

@@ -13,13 +13,20 @@ namespace CourseApp
 
         public static List<double> TaskA(double a, double xn, double xk, double dx)
         {
-            List<double> y = new List<double>((int)((xk - xn) / dx));
-            for (double x = xn; x < xk; x += dx)
+            if (xk < xn)
             {
-                y.Add(Formula(a, x));
+                return new List<double>();
             }
+            else
+            {
+                List<double> y = new List<double>((int)((xk - xn) / dx));
+                for (double x = xn; x < xk; x += dx)
+                {
+                    y.Add(Formula(a, x));
+                }
 
-            return y;
+                return y;
+            }
         }
 
         public static List<double> TaskB(double a, List<double> x)
@@ -52,8 +59,6 @@ namespace CourseApp
                 Console.WriteLine($"y = {item}");
             }
 
-            Console.ReadLine();
-
             Person[] people = new Person[2];
             people[0] = new Person("Sasha", "Smirnov", 25);
             people[1] = new Person("Polina", "Suvorova", 22);
@@ -61,6 +66,8 @@ namespace CourseApp
             {
                 Console.WriteLine(item);
             }
+
+            Console.ReadLine();
         }
     }
 }
