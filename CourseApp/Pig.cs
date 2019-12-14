@@ -91,15 +91,7 @@ namespace CourseApp
         public override string ToString()
         {
             return $"Имя:{Name},Возраст:{Age},Cало:{Salo}";
-            return @"       _       
-      (_)      
- _ __  _  __ _ 
-| '_ \| |/ _` |
-| |_) | | (_| |
-| .__/|_|\__, |
-| |       __/ |
-|_|      |___/ 
-";
+            
         }
         public void Aging()
         {

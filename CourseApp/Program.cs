@@ -48,6 +48,7 @@ namespace CourseApp
                 {
                     Console.WriteLine($"y= {item}");
                 }
+            Console.WriteLine(AgeClass.Age());
         }
     }
 }
