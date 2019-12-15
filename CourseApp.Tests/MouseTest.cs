@@ -34,18 +34,24 @@ namespace CourseApp.Tests
         [Fact]
         public void TestIncorrectSetAge()
         {
+            try
+            {
             var item = new Mouse();
             item.Age = -5;
-            Assert.Equal(0, item.Age);
+            }
+            catch (System.Exception)
+            {
+                Console.WriteLine("Age should be > 0 and < than 3");
+                Assert.True(true);
+            }
         }
 
         [Fact]
-        public void TestCorrectIncorrectSetAge()
+        public void TestIncorrectSetString()
         {
             var item = new Mouse();
-            item.Age = 2;
-            item.Age = -5;
-            Assert.Equal(2, item.Age);
+            item.Name = string.Empty;
+            Assert.Equal(string.Empty, item.Name);
         }
     }
 }

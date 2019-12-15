@@ -13,13 +13,20 @@ namespace CourseApp
 
         public static List<double> TaskA(double a, double xn, double xk, double dx)
         {
-            List<double> y = new List<double>((int)((xk - xn) / dx));
-            for (var x = xn; x < xk; x += dx)
+            if (xk < xn)
             {
-                y.Add(MyFunction(a, x));
+                return new List<double>();
             }
+            else
+            {
+                List<double> y = new List<double>((int)((xk - xn) / dx));
+                for (var x = xn; x < xk; x += dx)
+                {
+                    y.Add(MyFunction(a, x));
+                }
 
-            return y;
+                return y;
+            }
         }
 
         public static List<double> TaskB(double a, List<double> x)
@@ -55,7 +62,7 @@ namespace CourseApp
 
             Mouse[] animal = new Mouse[2];
             animal[0] = new Mouse("Larisa", 1, false);
-            animal[1] = new Mouse("Karl", 2, true);
+            animal[1] = new Mouse("Konstantin", 2, true);
             foreach (var item in animal)
             {
                 Console.WriteLine(item);

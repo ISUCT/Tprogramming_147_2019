@@ -47,7 +47,7 @@ namespace CourseApp
                 }
                 else
                 {
-                    Console.WriteLine("Age should be > 0 and < than 3");
+                    throw new System.Exception("Age should be > 0 and < than 3");
                 }
             }
         }
