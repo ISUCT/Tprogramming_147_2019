@@ -5,17 +5,6 @@ namespace CourseApp
 {
     public class AgeClass
     {
-        public static DateTime CompareTheDate(DateTime d1, DateTime d2)
-        {
-            if (d1.Ticks < d2.Ticks)
-            {
-                DateTime result = new DateTime(d2.Ticks - d1.Ticks);
-                return result;
-            }
-
-            throw new Exception();
-        }
-
         public static string Age()
         {
             Console.WriteLine("Введите год своего рождения:");
@@ -24,20 +13,30 @@ namespace CourseApp
             int months = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введите день своего рождения:");
             int days = Convert.ToInt32(Console.ReadLine());
-            DateTime birthDay = new DateTime(years, months, days);
-            DateTime result = new DateTime(DateTime.Now.Ticks - birthDay.Ticks);
-            return $"Вам {result.Year - 1} лет, {result.Month - 1} месяцев и {result.Day - 1} дней";
+            DateTime result = DateCompare(new DateTime(years, months, days), DateTime.Now);
+            return $"Вам {result.Year - 1} лет, {result.Month - 1} месяцев и {result.Day - 1} дня";
         }
 
-        public static string Age(int years, int months, int days)
+        public static string Age(int days, int months, int years)
         {
-            DateTime result = CompareTheDate(new DateTime(years, months, days), DateTime.Now);
-            return $"Вам {result.Year - 1} лет, {result.Month - 1} месяцев и {result.Day - 1} дней";
+            DateTime result = DateCompare(new DateTime(years, months, days), DateTime.Now);
+            return $"Вам {result.Year - 1} лет, {result.Month - 1} месяцев и {result.Day - 1} дня";
+        }
+
+        public static DateTime DateCompare(DateTime date1, DateTime date2)
+        {
+            if (date1.Ticks < date2.Ticks)
+            {
+                DateTime res = new DateTime(date2.Ticks - date1.Ticks);
+                return res;
+            }
+
+            throw new Exception();
         }
 
         public static string Age(DateTime date)
         {
-            return $"Вам {CompareTheDate(date, DateTime.Now).Year - 1} лет, {CompareTheDate(date, DateTime.Now).Month - 1} месяцев и {CompareTheDate(date, DateTime.Now).Day - 1} дней";
+            return $"Вам {DateCompare(date, DateTime.Now).Year - 1} лет, {DateCompare(date, DateTime.Now).Month - 1} месяцев и {DateCompare(date, DateTime.Now).Day - 1} дня";
         }
     }
 }
