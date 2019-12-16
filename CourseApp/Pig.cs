@@ -69,7 +69,7 @@ namespace CourseApp
             }
             set
             {
-                if (value >= 0)
+                if (value >= 1)
                 {
                     this.salo = value;
                 }

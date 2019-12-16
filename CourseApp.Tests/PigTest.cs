@@ -11,7 +11,7 @@ namespace CourseApp.Tests
             var item = new Pig();
             Assert.Equal(1, item.Age);
             Assert.Equal("Test", item.Name);
-            Assert.Equal(1, item.Salo);
+            Assert.Equal(0, item.Salo);
             Assert.Equal("male", item.Gender);
         }
 
