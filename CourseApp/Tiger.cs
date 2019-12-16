@@ -3,24 +3,24 @@ using System.Collections.Generic;
 
 namespace CourseApp
 {
-    public class Dog
+    public class Tiger
     {
         private int age;
         private string sex;
 
-        public Dog()
+        public Tiger()
         : this("Test")
         {
         }
 
-        public Dog(string name, int age, string sex)
+        public Tiger(string name, int age, string sex)
         {
             Name = name;
             Age = age;
             Sex = sex;
         }
 
-        public Dog(string name)
+        public Tiger(string name)
         : this(name, 1, "male")
         {
         }
@@ -76,15 +76,15 @@ namespace CourseApp
         {
             this.age++;
         }
-
+        
         public override string Vote()
         {
-            return "gawgaw";
+            return "grrgrr";
         }
 
-        public override string Runningspeed()
+         public override string Runningspeed()
         {
-            return "10-15km/h";
+            return "50-85km/h";
         }
     }
 }
