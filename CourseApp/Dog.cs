@@ -7,17 +7,33 @@ namespace CourseApp
     {
         private int age;
         private string sex;
-        public string Name { get; set; }
+
         public Dog()
         : this("Test")
         {
         }
+
+        public Dog(string name, int age, string sex)
+        {
+            Name = name;
+            Age = age;
+            Sex = sex;
+        }
+
+        public Dog(string name)
+        : this(name, 1, "male")
+        {
+        }
+
+        public string Name { get; set; }
+
         public string Sex
         {
             get
             {
                 return this.sex;
             }
+
             set
             {
                 if (value == "male")
@@ -30,16 +46,7 @@ namespace CourseApp
                 }
             }
         }
-        public Dog(string name, int age, string sex)
-        {
-            Name = name;
-            Age = age;
-            Sex = sex;
-        }
-        public Dog(string name)
-        : this(name, 1, "male")
-        {
-        }
+
         public int Age
         {
             get
@@ -59,10 +66,12 @@ namespace CourseApp
                 }
             }
         }
-         public override string ToString()
+
+        public override string ToString()
         {
             return $"Имя:{Name},Возраст:{Age},Пол:{Sex}";
         }
+
         public void AgeUp()
         {
             this.age++;
