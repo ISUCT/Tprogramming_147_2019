@@ -51,6 +51,7 @@ namespace CourseApp.Tests
                 Assert.True(true);
             }
         }
+
         [Fact]
         public void FullTest()
         {
