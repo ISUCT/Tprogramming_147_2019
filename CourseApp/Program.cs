@@ -64,6 +64,20 @@ namespace CourseApp
             {
                 Console.WriteLine($"y = {item}");
             }
+
+            string d, e, f;
+            int age1, age2, age3;
+             Console.WriteLine("Birth year: ");
+             d = Console.ReadLine();
+             Console.WriteLine("Birth month: ");
+             e = Console.ReadLine();
+             Console.WriteLine("Birth day: ");
+             f = Console.ReadLine();
+             age1 = System.Convert.ToInt32(d);
+             age2 = System.Convert.ToInt32(e);
+             age3 = System.Convert.ToInt32(f);
+             var item1 = new BirthDate(age1, age2, age3);
+             item1.CalcAge(age1);
         }
     }
 }

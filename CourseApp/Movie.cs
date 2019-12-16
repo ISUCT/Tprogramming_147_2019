@@ -69,5 +69,10 @@ namespace CourseApp
         {
             return $"Hi {who}, can you check {Name}({Year}) to watch? I want you to tell me something about it as a movie expert";
         }
+
+        public override string ToString()
+        {
+            return $"Имя: {Name}, Год: {Year}, Страна: {Country}";
+        }
     }
 }
