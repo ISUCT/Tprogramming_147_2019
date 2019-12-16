@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <NoWarn>1573,1591,1701;1702;1705;</NoWarn>
   </PropertyGroup>
 
@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <CodeAnalysisRuleSet>../_stylecop/stylecop.ruleset</CodeAnalysisRuleSet> 
+    <CodeAnalysisRuleSet>../_stylecop/stylecop.ruleset</CodeAnalysisRuleSet>
     <GenerateFullPaths>true</GenerateFullPaths>
   </PropertyGroup>
 
