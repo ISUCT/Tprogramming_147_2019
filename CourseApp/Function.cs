@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace CourseApp
 {
@@ -11,30 +13,27 @@ namespace CourseApp
             return c;
         }
 
-        public static double[] TaskA (
+        public static List<double> TaskA(
                                      double xn,
                                      double xk,
                                      double dx)
         {
-            var steps = (int)Math.Floor((xk - xn) / dx);
-            var y = new double[steps];
-            var i = 0;
+            List<double> y = new List<double>();
             for (var x = xn; x < xk; x += dx)
             {
-                y[i] = MyFunction(x);
-                i++;
+                y.Add(MyFunction(x));
             }
 
             return y;
         }
 
-        public static double[] TaskB (
-                                 double[] x)
+        public static List<double> TaskB (
+                                 List<double> x)
         {
-            var y = new double[x.Length];
-            for (int i = 0; i < x.Length; i++)
+            List<double> y = new List<double>(5);
+            foreach (double i in x)
             {
-                y[i] = MyFunction(x[i]);
+                y.Add(MyFunction(i));
             }
 
             return y;
@@ -44,20 +43,25 @@ namespace CourseApp
         {
             MyFunction(0);
             Console.WriteLine("Hello World!");
-            var taskA = TaskA(0.11, 0.36, 0.05);
+            List<double> taskA = TaskA(0.11, 0.36, 0.05);
             Console.WriteLine(taskA);
 
-            for (var i = 0; i < taskA.Length; i++)
+            foreach (var item in taskA)
             {
-                Console.WriteLine($"y={taskA[i]}");
+                Console.WriteLine($"y={item}");
             }
 
-            var xB = new double[] { 0.2, 0.3, 0.38, 0.43, 0.57 };
-            var taskB = TaskB(xB);
-            for (var i = 0; i < xB.Length; i++)
+            List<double> xB = new List<double>() { 0.2, 0.3, 0.38, 0.43, 0.57 };
+            List<double> taskB = TaskB(xB);
+            for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine($"x={xB[i]} y={taskB[i]}");
+                Console.WriteLine($"x={xB[i]}");
             }
+
+            foreach (var item in taskB)
+                {
+                    Console.WriteLine($"y={item}");
+                }
 
             Console.ReadLine();
         }
