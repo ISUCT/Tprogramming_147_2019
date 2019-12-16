@@ -2,7 +2,7 @@ using System;
 
 namespace CourseApp
 {
-    public class Person
+    public abstract class Person
     {
         private int age;
 
@@ -22,13 +22,19 @@ namespace CourseApp
         }
 
         public Person(string name, string lastname, int age)
+        : this(name, lastname, age, true)
+        {
+        }
+
+        public Person(string name, string lastname, int age, bool isMale)
         {
             this.Name = name;
             this.LastName = lastname;
             this.age = age;
+            this.IsMale = isMale;
         }
 
-        public int Age
+        public virtual int Age
         {
             get
             {
@@ -52,10 +58,14 @@ namespace CourseApp
 
         public string LastName { get; set; }
 
+        public bool IsMale { get; set; }
+
         public override string ToString()
         {
-            string s = $"Hi. I am {Name} {LastName}. I am {Age} years old.";
+            string s = $"Hi. I am {Name} {LastName}. I am {Age} years old. I am a {(IsMale ? "male" : "female")}";
             return s;
         }
+
+        public abstract string Replica();
     }
 }
