@@ -7,16 +7,25 @@ namespace CourseApp.Tests
     public class DemoTest
     {
         [Theory]
+
         [InlineData(0, 0, double.NaN)]
         [InlineData(0, 1, double.PositiveInfinity)]
         [InlineData(1, 2, 1.344)]
         public void TestCalc(double a, double x, double exp)
         {
             var res = Program.MyFunction(a, x);
+        [InlineData(0, 0, 0, double.NaN)]
+        [InlineData(1, 1, 2, 2.5)]
+        [InlineData(-1, 1, 1, 0)]
+        public void TestCalc(double a, double b, double x, double exp)
+        {
+            var res = Program.MyFunction(a, b, x);
+
             Assert.Equal(exp, res, 3);
         }
 
         [Fact]
+
         public void TestZeroMass()
         {
             var res = Program.MyFunction(0.0, 0.0);
@@ -51,8 +60,6 @@ namespace CourseApp.Tests
             {
                 Assert.Equal(exp[i], resA[i], 3);
             }
-        }
-
         [Fact]
         public void TestNormalB()
         {
@@ -69,6 +76,12 @@ namespace CourseApp.Tests
         public void TestIfNoB()
         {
             var res = Program.TaskB(1, new List<double>());
+        }
+
+        [Fact]
+        public void TestZeroLengthB()
+        {
+            var res = Program.TaskB(1, 1, new double[0]);
             Assert.Empty(res);
         }
     }
