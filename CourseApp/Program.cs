@@ -1,43 +1,38 @@
-﻿using System;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System;
 
 namespace CourseApp
 {
     public class Program
     {
-        public static double MyFunction(double a, double b, double x)
+        public static double MyFunction(double x)
         {
-            var c = (b * x) + (a / x);
-            return c;
+            var y = Math.Pow(Math.Pow(Math.Asin(x), 2) + Math.Pow(Math.Acos(x), 4), 3);
+            return y;
         }
 
-        public static double[] TaskA (
-                                     double a,
-                                     double b,
+        public static List<double> TaskA(
                                      double xn,
                                      double xk,
                                      double dx)
         {
-            var steps = (int)Math.Floor((xk - xn) / dx);
-            var y = new double[steps];
-            var i = 0;
+            List<double> y = new List<double>();
             for (var x = xn; x < xk; x += dx)
             {
-                y[i] = MyFunction(a, b, x);
-                i++;
+                y.Add(MyFunction(x));
             }
 
             return y;
         }
 
-        public static double[] TaskB (
-                                 double a,
-                                 double b,
-                                 double[] x)
+        public static List<double> TaskB(
+                                 List<double> x)
         {
-            var y = new double[x.Length];
-            for (int i = 0; i < x.Length; i++)
+            List<double> y = new List<double>(5);
+            foreach (double i in x)
             {
-                y[i] = MyFunction(a, b, x[i]);
+                y.Add(MyFunction(i));
             }
 
             return y;
@@ -46,25 +41,23 @@ namespace CourseApp
         public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            var taskA = TaskA(2, 3, 0, 5, 1);
-            Console.WriteLine(taskA);
-
-            for (var i = 0; i < taskA.Length; i++)
+            List<double> taskA = TaskA(0.26, 0.66, 0.08);
+            foreach (var item in taskA)
             {
-                Console.WriteLine($"y={taskA[i]}");
+                Console.WriteLine($"y={item}");
             }
 
-            var xB = new double[] { 0, 1, 2, 3 };
-            var taskB = TaskB(2, 3, xB);
-            for (var i = 0; i < xB.Length; i++)
+            List<double> xB = new List<double> { 0.1, 0.35, 0.4, 0.55, 0.6 };
+            List<double> taskB = TaskB(xB);
+            for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine($"x={xB[i]} y={taskB[i]}");
+                Console.WriteLine($"x={xB[i]}");
             }
 
-            var item = new Platypus();
-            Console.WriteLine(item.View());
-
-            Console.ReadLine();
+            foreach (var item in taskB)
+            {
+                Console.WriteLine($"y={item}");
+            }
         }
     }
 }
