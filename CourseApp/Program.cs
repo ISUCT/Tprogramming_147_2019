@@ -71,6 +71,8 @@ namespace CourseApp
                 Console.WriteLine();
             }
 
+            Console.WriteLine(AgeClass.Age());
+            Console.WriteLine();
             Console.ReadLine();
         }
     }
