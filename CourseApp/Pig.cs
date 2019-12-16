@@ -81,7 +81,7 @@ namespace CourseApp
         }
         public override void Voice()
         {
-            Console.WriteLine("Хрю-хрю");
+            Console.WriteLine("Хрю-хрю :)");
         }
         public override string ToString()
         {
