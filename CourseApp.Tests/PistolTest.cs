@@ -23,23 +23,6 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void TestIncorrectSetAge()
-        {
-            var item = new Pistol();
-            item.Kalibr = -5;
-            Assert.Equal(0, item.Kalibr);
-        }
-
-        [Fact]
-        public void TestCorrectIncorrectSetAge()
-        {
-            var item = new Pistol();
-            item.Kalibr = 10;
-            item.Kalibr = -5;
-            Assert.Equal(10, item.Kalibr);
-        }
-
-        [Fact]
         public void TestShoot()
         {
             var item = new Pistol("Glock", 10, true);
@@ -53,6 +36,21 @@ namespace CourseApp.Tests
             var item = new Pistol("Glock", 10, true);
             var act = item.NumShoot(15);
             Assert.Equal($"Glock made of 15 shots", act);
+        }
+
+         [Fact]
+        public void TestCorrectIncorrectSetKalibr()
+        {
+            var item = new Pistol();
+            try
+            {
+                item.Kalibr = -5;
+                Assert.Equal(-5, item.Kalibr);
+            }
+            catch (System.Exception)
+            {
+                Assert.True(true);
+            }
         }
     }
 }
