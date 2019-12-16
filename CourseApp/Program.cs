@@ -40,7 +40,7 @@ namespace CourseApp
 
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine(MyFunction(0.3));
             List<double> taskA = TaskA(0.26, 0.66, 0.08);
             foreach (var item in taskA)
             {
