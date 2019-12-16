@@ -35,7 +35,7 @@ namespace CourseApp
                 }
                 else
                 {
-                    Console.WriteLine("Enter correct kalibr");
+                    throw new Exception("Enter correct kalibr");
                 }
             }
         }
@@ -61,7 +61,7 @@ namespace CourseApp
 
         public override string ToString()
         {
-            return $"Pistol-{Model}, {Kalibr}, {Fire}";
+            return $"Pistil-{Model}, {Kalibr}, {Fire}";
         }
 
         public string NumShoot(int shot)
