@@ -23,9 +23,9 @@ namespace CourseApp
 
         public Animal(string name, int age, bool isMale)
         {
-            Name = name;
-            Age = age;
-            IsMale = isMale;
+            this.Name = name;
+            this.Age = age;
+            this.IsMale = isMale;
         }
 
         public virtual int Age
