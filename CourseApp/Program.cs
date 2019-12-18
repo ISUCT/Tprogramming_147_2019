@@ -62,7 +62,6 @@ namespace CourseApp
                 }
 
             Console.WriteLine("==========");
-            Console.WriteLine(AgeClass.Age());
         }
     }
 }
