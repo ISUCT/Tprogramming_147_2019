@@ -74,7 +74,7 @@ namespace CourseApp
 
         public void AgeUp()
         {
-            this.age++;
+            this.Age++;
         }
     }
 }
