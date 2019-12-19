@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CourseApp
 {
-    public class Tiger
+    public class Tiger : SuperAnimals
     {
         private int age;
         private string sex;
@@ -14,6 +14,7 @@ namespace CourseApp
         }
 
         public Tiger(string name, int age, string sex)
+        : base(name, age, sex)
         {
             Name = name;
             Age = age;
@@ -25,9 +26,7 @@ namespace CourseApp
         {
         }
 
-        public string Name { get; set; }
-
-        public string Sex
+        public override string Sex
         {
             get
             {
@@ -47,7 +46,7 @@ namespace CourseApp
             }
         }
 
-        public int Age
+        public override int Age
         {
             get
             {
@@ -72,11 +71,11 @@ namespace CourseApp
             return $"Имя:{Name},Возраст:{Age},Пол:{Sex}";
         }
 
-        public void AgeUp()
+        public override void AgeUp()
         {
             this.age++;
         }
-        
+
         public override string Vote()
         {
             return "grrgrr";
