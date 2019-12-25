@@ -1,17 +1,17 @@
-﻿using System;
+using System;
 
 namespace CourseApp
 {
-    public class Movie : Media
+    public class Music : Media
     {
         private int year;
 
-        public Movie()
-        : this(1990, "No title", "No country")
+        public Music()
+        : this(10, "No title", "No country")
         {
         }
 
-        public Movie(int year, string name, string country)
+        public Music(int year, string name, string country)
         : base(year, name, country)
         {
         }
@@ -25,9 +25,9 @@ namespace CourseApp
 
             set
             {
-                if (value < 1990 || value > DateTime.Now.Year)
+                if (value < 0 || value > DateTime.Now.Year)
                 {
-                    throw new System.Exception($"Production year should be between 1990 and {DateTime.Now.Year}");
+                    throw new System.Exception($"Production year should be between 0 and {DateTime.Now.Year}");
                 }
                 else
                 {
@@ -38,7 +38,7 @@ namespace CourseApp
 
         public override string Check()
         {
-        return $"I'm watching a movie, named {Name}, which came out in {Year} from {Country}";
+        return $"I'm listening a song, named {Name}, which came out in {Year} from {Country}";
         }
 
         public override string Mark(int mark)
@@ -52,16 +52,16 @@ namespace CourseApp
                return $"Well, {Name} pretty good, but it could be better.";
 
                case 3:
-               return $"{Name} is a great movie! You should really watch it too!";
+               return $"{Name} is a great song! You should really listen it too!";
 
                default:
-               return "Can't help, i didn't watch this film, sorry";
+               return "Can't help, i didn't listen this music, sorry";
            }
         }
 
         public override string Send(string who)
         {
-            return $"Hi {who}, can you check {Name}({Year}) to watch? I want you to tell me something about it as a movie expert";
+            return $"Hi {who}, can you check {Name}({Year}) to lisen? I want you to tell me something about it as a music expert";
         }
 
         public override string ToString()

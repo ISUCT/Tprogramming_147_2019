@@ -67,7 +67,7 @@ namespace CourseApp.Tests
         public void TestSendMovie()
         {
             var item = new Movie(1990, "It", "America-Canada");
-            var act = item.SendMovie("Semyon");
+            var act = item.Send("Semyon");
             Assert.Equal($"Hi Semyon, can you check It(1990) to watch? I want you to tell me something about it as a movie expert", act);
         }
 
@@ -75,7 +75,7 @@ namespace CourseApp.Tests
         public void TestWatchMovie()
         {
             var item = new Movie(1990, "It", "America-Canada");
-            var act = item.WatchMovie();
+            var act = item.Check();
             Assert.Equal($"I'm watching a movie, named It, which came out in 1990 from America-Canada", act);
         }
     }
