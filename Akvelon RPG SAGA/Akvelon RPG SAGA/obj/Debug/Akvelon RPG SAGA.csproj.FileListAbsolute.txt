@@ -1,0 +1,7 @@
+C:\Users\Степан\source\repos\Akvelon RPG SAGA\Akvelon RPG SAGA\bin\Debug\Akvelon RPG SAGA.exe.config
+C:\Users\Степан\source\repos\Akvelon RPG SAGA\Akvelon RPG SAGA\bin\Debug\Akvelon RPG SAGA.exe
+C:\Users\Степан\source\repos\Akvelon RPG SAGA\Akvelon RPG SAGA\bin\Debug\Akvelon RPG SAGA.pdb
+C:\Users\Степан\source\repos\Akvelon RPG SAGA\Akvelon RPG SAGA\obj\Debug\Akvelon RPG SAGA.csprojAssemblyReference.cache
+C:\Users\Степан\source\repos\Akvelon RPG SAGA\Akvelon RPG SAGA\obj\Debug\Akvelon RPG SAGA.csproj.CoreCompileInputs.cache
+C:\Users\Степан\source\repos\Akvelon RPG SAGA\Akvelon RPG SAGA\obj\Debug\Akvelon RPG SAGA.exe
+C:\Users\Степан\source\repos\Akvelon RPG SAGA\Akvelon RPG SAGA\obj\Debug\Akvelon RPG SAGA.pdb
