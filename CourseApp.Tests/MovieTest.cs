@@ -75,6 +75,7 @@ namespace CourseApp.Tests
         public void TestWatchMovie()
         {
             var item = new Movie(1990, "It", "America-Canada");
+
             var act = item.Check();
             Assert.Equal($"I'm watching a movie, named It, which came out in 1990 from America-Canada", act);
         }

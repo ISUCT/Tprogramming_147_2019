@@ -2,7 +2,9 @@
 
 namespace CourseApp
 {
+
     public class Movie : Media
+    public class Movie
     {
         private int year;
 
@@ -17,6 +19,17 @@ namespace CourseApp
         }
 
         public override int Year
+        {
+            Name = name;
+            Year = year;
+            Country = country;
+        }
+
+        public string Name { get; set; }
+
+        public string Country { get; set; }
+
+        public int Year
         {
             get
             {
@@ -67,6 +80,12 @@ namespace CourseApp
         public override string ToString()
         {
             return $"Имя: {Name}, Год: {Year}, Страна: {Country}";
+        }
+    }
+}
+        public string SendMovie(string who)
+        {
+            return $"Hi {who}, can you check {Name}({Year}) to watch? I want you to tell me something about it as a movie expert";
         }
     }
 }
