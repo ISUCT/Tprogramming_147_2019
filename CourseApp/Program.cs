@@ -62,7 +62,14 @@ namespace CourseApp
                 }
 
             Console.WriteLine("==========");
-            Console.WriteLine(AgeClass.Age());
+            Console.WriteLine("Введите год своего рождения:");
+            int years = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите месяц своего рождения:");
+            int months = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите день своего рождения:");
+            int days = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine(AgeClass.Age(days, months, years));
         }
     }
 }

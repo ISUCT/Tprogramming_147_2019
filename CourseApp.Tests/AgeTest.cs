@@ -8,25 +8,13 @@ namespace CourseApp.Tests
         [Fact]
         public void TestDate()
         {
-            double x = DateTime.Now.Ticks - new DateTime(2000, 12, 7).Ticks;
-            double y = AgeClass.DateCompare(new DateTime(2000, 12, 7), DateTime.Now).Ticks;
-            if (y - x > 0.000000001)
-            {
-                Assert.True(true);
-            }
+            Assert.Equal("Вам 19 лет, 9 месяцев и 2 дня", AgeClass.Age(25, 3, 2000));
         }
 
         [Fact]
         public void TodayBirthdayTest()
         {
-            try
-            {
-                Assert.Equal(0, DateTime.Compare(DateTime.Now, AgeClass.DateCompare(DateTime.Now, DateTime.Now)));
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Birthday == Today");
-            }
+            Assert.Equal("Вам 0 лет, 0 месяцев и 0 дня", AgeClass.Age(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year));
         }
 
         [Fact]
@@ -34,11 +22,13 @@ namespace CourseApp.Tests
         {
             try
             {
-                Assert.Equal(0, DateTime.Compare(DateTime.Now, AgeClass.DateCompare(DateTime.Now, new DateTime(2048, 8, 16))));
+                AgeClass.Age(16, 8, 2048);
+                Assert.True(false);
             }
-            catch (Exception)
+            catch
             {
                 Console.WriteLine("Birthday > Today");
+                Assert.True(true);
             }
         }
     }
