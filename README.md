@@ -1,2 +1,2 @@
 # Tprogramming_147_2019
-Ф.И.О: Орешников Денис Владимирович
+Oreshnikov Denis
