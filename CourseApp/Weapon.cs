@@ -11,11 +11,11 @@ namespace CourseApp
             Fire = fire;
         }
 
-        public string Model { get; set; }
+        public virtual string Model { get; set; }
 
         public virtual double Kalibr { get; set; }
 
-        public bool Fire { get; set; }
+        public virtual bool Fire { get; set; }
 
         public virtual bool CanShoot { get; set; }
 

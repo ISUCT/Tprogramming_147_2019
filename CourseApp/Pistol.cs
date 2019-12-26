@@ -2,10 +2,7 @@ using System;
 
 namespace CourseApp
 {
-
     public class Pistol : Weapon
-
-
     {
         private double kalibr;
 
@@ -22,10 +19,9 @@ namespace CourseApp
             Fire = fire;
         }
 
-        public override double Kalibr
-        public string Model { get; set; }
+        public override string Model { get; set; }
 
-        public double Kalibr
+        public override double Kalibr
         {
             get
             {
@@ -45,16 +41,14 @@ namespace CourseApp
             }
         }
 
-        public override bool CanShoot
-        public bool Fire { get; set; }
+        public override bool Fire { get; set; }
 
-        public bool CanShoot
+        public override bool CanShoot
         {
             get { return this.Fire; }
         }
 
         public override string Shoot(bool canShoot)
-        public string Shoot(bool canShoot)
         {
             if (canShoot == true)
             {
@@ -71,7 +65,7 @@ namespace CourseApp
             return $"Pistil-{Model}, {Kalibr}, {Fire}";
         }
 
-        public string NumShoot(int shot)
+        public override string NumShoot(int shot)
         {
             return $"{Model} made of {shot} shots";
         }
