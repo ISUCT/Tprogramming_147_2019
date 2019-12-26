@@ -9,7 +9,7 @@
 
    <ItemGroup>
     <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" PrivateAssets="all" />
-  </ItemGroup>  
+  </ItemGroup>
 
   <PropertyGroup>
     <CodeAnalysisRuleSet>../_stylecop/stylecop.ruleset</CodeAnalysisRuleSet> 
