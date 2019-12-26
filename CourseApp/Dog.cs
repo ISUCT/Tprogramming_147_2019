@@ -16,9 +16,6 @@ namespace CourseApp
         public Dog(string name, int age, string sex)
         : base(name, age, sex)
         {
-            Name = name;
-            Age = age;
-            Sex = sex;
         }
 
         public Dog(string name)

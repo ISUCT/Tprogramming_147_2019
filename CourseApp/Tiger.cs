@@ -16,9 +16,6 @@ namespace CourseApp
         public Tiger(string name, int age, string sex)
         : base(name, age, sex)
         {
-            Name = name;
-            Age = age;
-            Sex = sex;
         }
 
         public Tiger(string name)
@@ -68,7 +65,7 @@ namespace CourseApp
 
         public override string ToString()
         {
-            return $"Имя:{Name},Возраст:{Age},Пол:{Sex}";
+            return $"Tiger(base) ToString";
         }
 
         public override void AgeUp()
