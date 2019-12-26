@@ -35,7 +35,7 @@ namespace CourseApp
 
             set
             {
-                if (value == "male")
+                if (value == "male" || value == "female")
                 {
                     this.sex = value;
                 }
@@ -55,7 +55,7 @@ namespace CourseApp
 
             set
             {
-                if (value >= 1 && value < 10)
+                if (value >= 1 && value < 20)
                 {
                     this.age = value;
                 }
@@ -76,7 +76,7 @@ namespace CourseApp
             this.age++;
         }
 
-        public override string Vote()
+        public override string Vose()
         {
             return "grrgrr";
         }

@@ -20,18 +20,13 @@ namespace CourseApp
 
         public new abstract string ToString();
 
-        public abstract string Vote();
+        public abstract string Vose();
 
         public abstract string Runningspeed();
 
         public virtual void AgeUp()
         {
             this.Age++;
-        }
-
-        public virtual string VirtualView()
-        {
-            return "Virtual Metod";
         }
     }
 }
