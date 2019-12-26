@@ -2,17 +2,17 @@ using System;
 
 namespace CourseApp
 {
-    public class Mouse
+    public class Mouse : Animal
     {
         private int age;
 
         public Mouse()
-        : this("Untitled")
+        : this("Неизвестно")
         {
         }
 
         public Mouse(string name)
-        : this(name, 0)
+        : this(name, 1)
         {
         }
 
@@ -22,17 +22,19 @@ namespace CourseApp
         }
 
         public Mouse(string name, int age, bool isMale)
+        : this(name, age, isMale, false)
         {
-            Name = name;
-            Age = age;
-            IsMale = isMale;
         }
 
-        public string Name { get; set; }
+        public Mouse(string name, int age, bool isMale, bool aggression)
+        : base(name, age, isMale)
+        {
+            this.Aggression = aggression;
+        }
 
-        public bool IsMale { get; set; }
+        public bool Aggression { get; set; }
 
-        public int Age
+        public override int Age
         {
             get
             {
@@ -54,8 +56,13 @@ namespace CourseApp
 
         public override string ToString()
         {
-            string s = $"Piep piep. I am {Name}. I am {(IsMale ? "male" : "female")} {Age} years old.";
+            string s = $"I am {(Aggression ? "aggression" : "friendly")} {Name}. I am {(IsMale ? "male" : "female")} {Age} years old.";
             return s;
+        }
+
+        public override string Voice()
+        {
+            return "Piep, piep";
         }
     }
 }

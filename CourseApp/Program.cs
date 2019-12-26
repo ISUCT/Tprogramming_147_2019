@@ -60,12 +60,16 @@ namespace CourseApp
                 Console.WriteLine($"y = {item}");
             }
 
-            Mouse[] animal = new Mouse[2];
-            animal[0] = new Mouse("Larisa", 1, false);
-            animal[1] = new Mouse("Konstantin", 2, true);
-            foreach (var item in animal)
+            Console.WriteLine();
+
+            Animal[] masss = new Animal[2];
+            masss[0] = new Mouse("Larisa", 2, false, true);
+            masss[1] = new Cat("Kyza", 7, true, true);
+            foreach (var item in masss)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(item.ToString());
+                Console.WriteLine(item.Voice());
+                Console.WriteLine();
             }
 
             Console.ReadLine();
