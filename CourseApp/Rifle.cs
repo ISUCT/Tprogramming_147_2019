@@ -2,16 +2,16 @@ using System;
 
 namespace CourseApp
 {
-    public class Pistol : Weapon
+    public class Rifle : Weapon
     {
         private double kalibr;
 
-        public Pistol()
+        public Rifle()
         : this("No model", 0, true)
         {
         }
 
-        public Pistol(string model, double kalibr, bool fire)
+        public Rifle(string model, double kalibr, bool fire)
         : base(model, kalibr, fire)
         {
             Model = model;
@@ -44,15 +44,20 @@ namespace CourseApp
             get { return this.Fire; }
         }
 
+        public override string ToString()
+        {
+            return $"Rifle-{Model}, {Kalibr}, {Fire}";
+        }
+
         public override string Shoot(bool canShoot)
         {
             if (canShoot == true)
             {
-                return $"Pistol {Model} and {Kalibr} made the shot!";
+                return $"Rifle {Model} and {Kalibr} made the shot!";
             }
             else
             {
-                return $"Pistol {Model} and {Kalibr} not made the shot!";
+                return $"Rifle {Model} and {Kalibr} not made the shot!";
             }
         }
     }
