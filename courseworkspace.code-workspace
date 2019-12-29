@@ -1,11 +1,16 @@
 {
-	"folders": [
-		{
-			"path": "CourseApp"
-		},
-		{
-			"path": "CourseApp.Tests"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "CourseApp"
+    },
+    {
+      "path": "CourseApp.Tests"
+    },
+    {
+      "path": "HTML"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "HTML"
+  }
 }
