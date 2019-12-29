@@ -67,10 +67,5 @@ namespace CourseApp
         }
 
         public abstract string Replica();
-        public override string ToString()
-        {
-            string s = $"Hi. I am {Name} {LastName}. I am {Age} years old.";
-            return s;
-        }
     }
 }
