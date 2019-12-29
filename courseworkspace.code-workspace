@@ -12,3 +12,13 @@
   ],
   "settings": {}
 }
+	"folders": [
+		{
+			"path": "CourseApp"
+		},
+		{
+			"path": "CourseApp.Tests"
+		}
+	],
+	"settings": {}
+}
