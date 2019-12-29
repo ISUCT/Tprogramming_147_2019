@@ -3,21 +3,21 @@ using System.Collections.Generic;
 
 namespace CourseApp
 {
-    public class Dog : Animals
+    public class Cat : Animals
     {
         private int age;
 
-        public Dog()
+        public Cat()
         : base()
         {
         }
 
-        public Dog(string name)
+        public Cat(string name)
         : base(name)
         {
         }
 
-        public Dog(string name, int age, string sex)
+        public Cat(string name, int age, string sex)
         : base(name, age, sex)
         {
         }
@@ -31,7 +31,7 @@ namespace CourseApp
 
             set
             {
-                if (value > 0 && value < 14)
+                if (value > 0 && value < 17)
                 {
                     this.age = value;
                 }
@@ -44,12 +44,12 @@ namespace CourseApp
 
         public override string RunningSpeed()
         {
-            return "Средняя скорость собаки при беге приблизительно равна 10 - 15 км/час";
+            return "Средняя скорость домашнего кота во время бега - 43 - 45 км/ч, максимальная - до 50 км/ч";
         }
 
         public override string ToString()
         {
-            return (Sex == "male") ? $"Собака по имени {Name}. Его возраст - {Age}, пол - мужской" : $"Собака по имени {Name}. Её возраст - {Age}, пол - женский";
+            return (Sex == "male") ? $"Кот по имени {Name}. Его возраст - {Age}, пол - мужской" : $"Кошка по имени {Name}. Её возраст - {Age}, пол - женский";
         }
 
         public override void Info()
