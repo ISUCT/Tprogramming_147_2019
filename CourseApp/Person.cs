@@ -62,7 +62,7 @@ namespace CourseApp
 
         public override string ToString()
         {
-            string s = $"Hi. I am {Name} {LastName}. I am {Age} years old. I am a {(IsMale ? "male" : "female")}";
+            string s = $"Hi. I am {Name} {LastName}.";
             return s;
         }
 
