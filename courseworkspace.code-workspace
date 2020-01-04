@@ -10,15 +10,7 @@
       "path": "HTML"
     }
   ],
-  "settings": {}
-}
-	"folders": [
-		{
-			"path": "CourseApp"
-		},
-		{
-			"path": "CourseApp.Tests"
-		}
-	],
-	"settings": {}
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "HTML"
+  }
 }
