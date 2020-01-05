@@ -62,6 +62,7 @@ namespace CourseApp
                 }
 
             Console.WriteLine("==========");
+<<<<<<< HEAD
             Animals[] animals = new Animals[2];
             animals[0] = new Dog("White", 5, "female");
             animals[1] = new Cat("Black");
@@ -70,6 +71,16 @@ namespace CourseApp
                 animal.Info();
                 Console.WriteLine();
             }
+=======
+            Console.WriteLine("Введите год своего рождения:");
+            int years = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите месяц своего рождения:");
+            int months = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите день своего рождения:");
+            int days = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine(AgeClass.Age(days, months, years));
+>>>>>>> 7653183ae977ebc9ddf2700ec3d9c0cf99118425
         }
     }
 }

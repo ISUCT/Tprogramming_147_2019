@@ -49,6 +49,7 @@ namespace CourseApp
 
         public override string ToString()
         {
+<<<<<<< HEAD
             return (Sex == "male") ? $"Собака по имени {Name}. Его возраст - {Age}, пол - мужской" : $"Собака по имени {Name}. Её возраст - {Age}, пол - женский";
         }
 
@@ -57,5 +58,9 @@ namespace CourseApp
             Console.WriteLine(this.ToString());
             Console.WriteLine(this.RunningSpeed());
         }
+=======
+            this.Age++;
+        }
+>>>>>>> 7653183ae977ebc9ddf2700ec3d9c0cf99118425
     }
 }
