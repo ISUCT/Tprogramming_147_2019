@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace CourseApp
 {
@@ -58,12 +59,12 @@ namespace CourseApp
             const double b = 0;
             var xB = new List<double> { 0.15, 0.26, 0.37, 0.48, 0.53 };
             var taskB = TaskB(a, b, xB);
-           for (var i = 0; i < taskB.Count; i++)
+            for (var i = 0; i < taskB.Count; i++)
             {
                 Console.WriteLine($"x={xB[i]} y={taskB[i]}");
             }
 
-            Console.WriteLine("Table info:"); 
+            Console.WriteLine("Table info:");
 
             List<Furniture> furniture = new List<Furniture>()
             {
@@ -91,7 +92,14 @@ namespace CourseApp
                 Console.WriteLine(exc.Message);
             }
 
-            Console.ReadLine();   
+            Console.WriteLine("Birthday info:");
+            Birthday birthday = new Birthday(DateTime.Now);
+            Console.WriteLine("Birthday equals current date: {0}", birthday);
+            birthday = new Birthday(new DateTime(2001, 9, 12));
+            Console.WriteLine("Birthday before current date: {0}", birthday);
+            birthday = new Birthday(new DateTime(3002, 9, 12));
+            Console.WriteLine("Birthday after current date: {0}", birthday);
+            Console.ReadLine();
         }
     }
 }
