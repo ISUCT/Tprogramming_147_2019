@@ -40,6 +40,12 @@ namespace CourseApp
 
         public static void Main(string[] args)
         {
+            var characters = new Character[] { new Hero(), new Enemy() };
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine(characters[i].Shoot(true));
+            }
+
             Console.WriteLine(MyFunction(0.3));
             List<double> taskA = TaskA(0.26, 0.66, 0.08);
             foreach (var item in taskA)
@@ -58,6 +64,9 @@ namespace CourseApp
             {
                 Console.WriteLine($"y={item}");
             }
+
+            var countAge = new AgeCounter();
+            Console.WriteLine(countAge.CountAge(20, 10, 2010));
         }
     }
 }

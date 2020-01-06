@@ -2,14 +2,14 @@ using System;
 
 namespace CourseApp
 {
-    public class Hero : Character
+    public class Enemy : Character
     {
-        public Hero()
+        public Enemy()
         : this("No role", 0, true)
         {
         }
 
-        public Hero(string role, double level, bool attack)
+        public Enemy(string role, double level, bool attack)
         : base(role, level, attack)
         {
         }
@@ -18,22 +18,22 @@ namespace CourseApp
         {
             if (canShoot == true)
             {
-                return $"Hero {Role} and {Level} made the shot!";
+                return $"Enemy {Role} and {Level} made the shot!";
             }
             else
             {
-                return $"Hero {Role} and {Level} not made the shot!";
+                return $"Enemy {Role} and {Level} not made the shot!";
             }
         }
 
         public override string ToString()
         {
-            return $"Hero-{Role}, {Level}, {Attack}";
+            return $"Enemy-{Role}, {Level}, {Attack}";
         }
 
         public override string NumShoot(int shot)
         {
-            return $"{Role} made of {shot} shots!";
+            return $"{Role} made of {shot} to himself!";
         }
     }
 }
