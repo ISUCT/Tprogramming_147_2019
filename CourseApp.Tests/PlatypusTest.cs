@@ -6,50 +6,81 @@ namespace CourseApp.Tests
     public class PlatypusTest
     {
         [Fact]
-        public void TestEmptyConstructor()
+        public void TestCreateTable()
         {
-            var item = new Platypus();
-            Assert.Equal(0, item.Age);
-            Assert.Equal("Untitled", item.Name);
-            Assert.True(item.IsMale);
+            var item = new Table(12, 13, "white");
+            Assert.Equal(12, item.Weight);
+            Assert.Equal(13, item.Height);
+            Assert.Equal("white", item.Color);
         }
 
         [Fact]
-        public void TestView()
+        public void TestCreateTableWithoutColor()
         {
-            var item = new Platypus();
-            var view = @"
-         _.-^~~^^^`~-,_,,~''''''```~,''``~'``~,
- ______,'  -o  :.  _    .          ;     ,'`,  `.
-(      -\.._,.;;'._ ,(   }        _`_-_,,    `, `,
- ``~~~~~~'   ((/'((((____/~~~~~~'(,(,___>      `~'
- ";
-            Assert.Equal(view, item.View());
+            var item = new Table(12, 13);
+            Assert.Equal(12, item.Weight);
+            Assert.Equal(13, item.Height);
+            Assert.Equal("black", item.Color);
         }
 
         [Fact]
-        public void TestSetAge()
+        public void TestGetToString()
         {
-            var item = new Platypus();
-            item.Age = 5;
-            Assert.Equal(5, item.Age);
+            var ecString = "Weight = 400, Height = 400, Color = black";
+            var item = new Table(400, 400, "black");
+            Assert.Equal(ecString, item.ToString());
         }
 
         [Fact]
-        public void TestIncorrectSetAge()
+        public void TestCreateTableWithWrongWeigth()
         {
-            var item = new Platypus();
-            item.Age = -5;
-            Assert.Equal(0, item.Age);
+            try
+            {
+                var item = new Table(0, 12, "red");
+            }
+            catch (Exception exc)
+            {
+                Assert.Equal("Value does not fall within the expected range.", exc.Message);
+            }
         }
 
         [Fact]
-        public void TestCorrectIncorrectSetAge()
+        public void TestCreateTableWithWrongHeigth()
         {
-            var item = new Platypus();
-            item.Age = 10;
-            item.Age = -5;
-            Assert.Equal(10, item.Age);
+            try
+            {
+                var item = new Table(12, 0, "red");
+            }
+            catch (Exception exc)
+            {
+                Assert.Equal("Value does not fall within the expected range.", exc.Message);
+            }
+        }
+
+        [Fact]
+        public void TestCreateTableWithWrongColorNull()
+        {
+            try
+            {
+                var item = new Table(12, 12, null);
+            }
+            catch (Exception exc)
+            {
+                Assert.Equal("Value does not fall within the expected range.", exc.Message);
+            }
+        }
+
+        [Fact]
+        public void TestCreateTableWithWrongColorEmpty()
+        {
+            try
+            {
+                var item = new Table(12, 12, string.Empty);
+            }
+            catch (Exception exc)
+            {
+                Assert.Equal("Value does not fall within the expected range.", exc.Message);
+            }
         }
     }
 }
