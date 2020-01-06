@@ -9,7 +9,7 @@ namespace CourseApp.Tests
         public void TestCreateTable()
         {
             var item = new Table(12, 13, "white");
-            Assert.Equal(12, item.Weigh);
+            Assert.Equal(12, item.Weight);
             Assert.Equal(13, item.Height);
             Assert.Equal("white", item.Color);
         }
@@ -18,7 +18,7 @@ namespace CourseApp.Tests
         public void TestCreateTableWithoutColor()
         {
             var item = new Table(12, 13);
-            Assert.Equal(12, item.Weigh);
+            Assert.Equal(12, item.Weight);
             Assert.Equal(13, item.Height);
             Assert.Equal("black", item.Color);
         }
@@ -26,7 +26,7 @@ namespace CourseApp.Tests
         [Fact]
         public void TestGetToString()
         {
-            var ecString = "Weigh = 12, Height = 12, Color = red";
+            var ecString = "Weight = 12, Height = 12, Color = red";
             var item = new Table(12, 12, "red");
             Assert.Equal(ecString, item.ToString());
         }
