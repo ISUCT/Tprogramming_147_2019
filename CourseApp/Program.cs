@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace CourseApp
 {
@@ -58,14 +59,48 @@ namespace CourseApp
             const double b = 0;
             var xB = new List<double> { 0.15, 0.26, 0.37, 0.48, 0.53 };
             var taskB = TaskB(a, b, xB);
-           for (var i = 0; i < taskB.Count; i++)
+            for (var i = 0; i < taskB.Count; i++)
             {
                 Console.WriteLine($"x={xB[i]} y={taskB[i]}");
             }
 
-            var item = new Platypus();
-            Console.WriteLine(item.View());
+            Console.WriteLine("Table info:");
 
+            List<Furniture> furniture = new List<Furniture>()
+            {
+                new Table(500, 120),
+                new Table(400, 400, "red"),
+                new Chair(100, 100),
+                new Chair(120, 120, "yellow"),
+                new Chair(100, 100, "red", 4),
+                new Chair(120, 120, "yellow", 2),
+                new Table(400, 400, countLegs: 3),
+            };
+
+            for (int i = 0; i < furniture.Count; i++)
+            {
+                furniture[i].Build();
+                Console.WriteLine(furniture[i].ToString());
+            }
+
+            try
+            {
+                furniture.Add(new Table(0, 12, null));
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine(exc.Message);
+            }
+
+            Console.WriteLine("Birthday info:");
+            Birthday birthday = new Birthday(DateTime.Now);
+            Console.WriteLine("Birthday equals current date: {0}", birthday);
+            birthday = new Birthday(new DateTime(2001, 9, 12));
+            Console.WriteLine("Birthday before current date: {0}", birthday);
+            birthday = new Birthday(new DateTime(3002, 9, 12));
+            Console.WriteLine("Birthday after current date: {0}", birthday);
+            birthday = new Birthday(new DateTime(2001, 9, 12));
+            Console.WriteLine("Full years and mounth: {0}", birthday.CalculateFullCountYearsAndMonth());
             Console.ReadLine();
         }
     }
