@@ -2,29 +2,22 @@ using System;
 
 namespace CourseApp
 {
-    public class Table
+    public class Table : Furniture
     {
-        public Table(double weight, double height, string color = "black")
+        public Table(double weight, double height, string color = "black",  int countLegs = 4): base(weight, height, color)
         {
-            if (weight == 0 || height == 0 || string.IsNullOrEmpty(color))
-            {
-                throw new ArgumentException();
-            }
-
-            Weigh = weight;
-            Height = height;
-            Color = color;
+            CountLegs = countLegs;
         }
 
-        public double Weigh { get; private set; }
+        public double CountLegs { get; private set; }
 
-        public double Height { get; private set; }
-
-        public string Color { get; private set; }
+        public override void Build() {
+            Console.WriteLine("Build table.");
+        }
 
         public override string ToString()
         {
-            return "Weigh = " + Weigh + ", Height = " + Height + ", Color = " + Color;
+            return "Table: Weigh = " + Weight + ", Height = " + Height + ", Color = " + Color + ", Count legs = " + CountLegs;
         }
     }
 }
