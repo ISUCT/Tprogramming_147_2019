@@ -63,8 +63,25 @@ namespace CourseApp
                 Console.WriteLine($"x={xB[i]} y={taskB[i]}");
             }
 
-            var item = new Platypus();
-            Console.WriteLine(item.View());
+            List<Table> tables = new List<Table>()
+            {
+                new Table(12, 12),
+                new Table(12, 12, "red")
+            };
+
+            for (int i = 0; i < tables.Count; i++)
+            {
+                Console.WriteLine(tables[i].ToString());
+            }
+
+            try
+            {
+                tables.Add(new Table(0, 12, null));
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine(exc.Message);
+            }
 
             Console.ReadLine();   
         }
