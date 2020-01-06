@@ -27,7 +27,7 @@ namespace CourseApp.Tests
         public void TestGetToString()
         {
             var ecString = "Table: Weigh = 400, Height = 400, Color = red, Count legs = 4";
-            var item = new Table(12, 12, "red");
+            var item = new Table(400, 400, "red");
             Assert.Equal(ecString, item.ToString());
         }
 
