@@ -66,7 +66,7 @@ namespace CourseApp
             var item = new Platypus();
             Console.WriteLine(item.View());
 
-            Console.ReadLine();
+            Console.ReadLine();   
         }
     }
 }
