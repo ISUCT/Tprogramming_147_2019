@@ -40,9 +40,17 @@ namespace CourseApp
             return days > 0 ? days : 0;
         }
 
+        public string CalculateFullCountYearsAndMonth()
+        {
+            var currentYear = CalculateCountYear();
+            var currentMonth = CalculateCountMonth() - CalculateCountYear() * 12;
+            var currentDays = DateTime.Now.Day;
+            return "Years " + currentYear + ", month " + currentMonth + ", days " + currentDays;
+        }
+
         public override string ToString()
         {
-            return "Years " + CalculateCountYear() + ", mounth " + CalculateCountMonth() + ", days " + CalculateCountDays();
+            return "Years " + CalculateCountYear() + ", month " + CalculateCountMonth() + ", days " + CalculateCountDays();
         }
     }
 }

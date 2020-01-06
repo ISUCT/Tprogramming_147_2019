@@ -99,6 +99,8 @@ namespace CourseApp
             Console.WriteLine("Birthday before current date: {0}", birthday);
             birthday = new Birthday(new DateTime(3002, 9, 12));
             Console.WriteLine("Birthday after current date: {0}", birthday);
+            birthday = new Birthday(new DateTime(2001, 9, 12));
+            Console.WriteLine("Full years and mounth: {0}", birthday.CalculateFullCountYearsAndMonth());
             Console.ReadLine();
         }
     }
