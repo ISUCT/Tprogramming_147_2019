@@ -63,28 +63,20 @@ namespace CourseApp
                 Console.WriteLine($"x={xB[i]} y={taskB[i]}");
             }
 
-            Console.WriteLine("Table info:"); 
-
-            List<Furniture> furniture = new List<Furniture>()
+            List<Table> tables = new List<Table>()
             {
-                new Table(500, 120),
-                new Table(400, 400, "red"),
-                new Chair(100, 100),
-                new Chair(120, 120, "yellow"),
-                new Chair(100, 100, "red", 4),
-                new Chair(120, 120, "yellow", 2),
-                new Table(400, 400, countLegs: 3),
+                new Table(12, 12),
+                new Table(12, 12, "red")
             };
 
-            for (int i = 0; i < furniture.Count; i++)
+            for (int i = 0; i < tables.Count; i++)
             {
-                furniture[i].Build();
-                Console.WriteLine(furniture[i].ToString());
+                Console.WriteLine(tables[i].ToString());
             }
 
             try
             {
-                furniture.Add(new Table(0, 12, null));
+                tables.Add(new Table(0, 12, null));
             }
             catch (Exception exc)
             {
