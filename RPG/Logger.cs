@@ -8,15 +8,15 @@ namespace RPG
         {
             if (Player1.typeClass == "Рыцарь")
             {
-                Console.Write($"{Player1.typeClass} {Player1.Name} ({Player1.Health} / {Player1.maxHealth}) ударил мечом {Player2.typeClass} {Player2.Name} ({Player2.Health} / {Player2.maxHealth}) и нанёс {damage} урона.");
+                Console.Write($"{Player1.typeClass} {Player1.Name} ({Player1.Health} из {Player1.maxHealth} hp) ударил мечом {Player2.typeClass} {Player2.Name} ({Player2.Health} из {Player2.maxHealth} hp) и нанёс {damage} урона.");
             }
             else if (Player1.typeClass == "Лучник")
             {
-                Console.Write($"{Player1.typeClass} {Player1.Name} ({Player1.Health} / {Player1.maxHealth}) выстрелил в {Player2.typeClass} {Player2.Name} ({Player2.Health} / {Player2.maxHealth}) и нанёс {damage} урона.");
+                Console.Write($"{Player1.typeClass} {Player1.Name} ({Player1.Health} из {Player1.maxHealth} hp) выстрелил в {Player2.typeClass} {Player2.Name} ({Player2.Health} из {Player2.maxHealth} hp) и нанёс {damage} урона.");
             }
             else
             {
-                Console.Write($"{Player1.typeClass} {Player1.Name} ({Player1.Health} / {Player1.maxHealth}) ударил посохом {Player2.typeClass} {Player2.Name} ({Player2.Health} / {Player2.maxHealth}) и нанёс {damage} урона.");
+                Console.Write($"{Player1.typeClass} {Player1.Name} ({Player1.Health} из {Player1.maxHealth} hp) ударил посохом {Player2.typeClass} {Player2.Name} ({Player2.Health} из {Player2.maxHealth} hp) и нанёс {damage} урона.");
             }
 
             if (Player1.buff)
@@ -33,19 +33,19 @@ namespace RPG
         {
             if (Player1.sleepTime > 0 && damage == 0)
             {
-                Console.WriteLine($"{Player1.typeClass} {Player1.Name} ({Player1.Health} / {Player1.maxHealth}) использует умение \"{skillName}\" и оглушает {Player2.typeClass} {Player2.Name} ({Player2.Health} / {Player2.maxHealth}) на {Player1.sleepTime} хода.");
+                Console.WriteLine($"{Player1.typeClass} {Player1.Name} ({Player1.Health} из {Player1.maxHealth} hp) использует умение \"{skillName}\" и оглушает {Player2.typeClass} {Player2.Name} ({Player2.Health} из {Player2.maxHealth} hp) на {Player1.sleepTime} хода.");
             }
             else if (Player1.sleepTime > 1)
             {
-                Console.WriteLine($"{Player1.typeClass} {Player1.Name} ({Player1.Health} / {Player1.maxHealth}) использовал(-a) умение \"{skillName}\" и нанес(-ла) {Player2.typeClass} {Player2.Name} {damage} урона. {Player2.typeClass} {Player2.Name} ({Player2.Health} / {Player2.maxHealth}) оглушен(-а) на {Player1.sleepTime} ход(-а).");
+                Console.WriteLine($"{Player1.typeClass} {Player1.Name} ({Player1.Health} из {Player1.maxHealth} hp) использовал(-a) умение \"{skillName}\" и нанес(-ла) {Player2.typeClass} {Player2.Name} {damage} урона. {Player2.typeClass} {Player2.Name} ({Player2.Health} из {Player2.maxHealth} hp) оглушен(-а) на {Player1.sleepTime} ход(-а).");
             }
             else if (Player1.buff && damage == 0)
             {
-                Console.WriteLine($"{Player1.typeClass} {Player1.Name} ({Player1.Health} / {Player1.maxHealth}) активировал усиление \"{skillName}\"");
+                Console.WriteLine($"{Player1.typeClass} {Player1.Name} ({Player1.Health} из {Player1.maxHealth} hp) активировал усиление \"{skillName}\"");
             }
             else
             {
-                Console.Write($"{Player1.typeClass} {Player1.Name} ({Player1.Health} / {Player1.maxHealth}) использовал(-a) умение \"{skillName}\" и нанес(-ла) {Player2.typeClass} {Player2.Name} ({Player2.Health} / {Player2.maxHealth}) {damage} урона.");
+                Console.Write($"{Player1.typeClass} {Player1.Name} ({Player1.Health} из {Player1.maxHealth} hp) использовал(-a) умение \"{skillName}\" и нанес(-ла) {Player2.typeClass} {Player2.Name} ({Player2.Health} из {Player2.maxHealth} hp) {damage} урона.");
 
                 if (Player1.buff)
                 {
@@ -60,12 +60,12 @@ namespace RPG
 
         public void Sleep(Player Player)
         {
-            Console.WriteLine($"{Player.typeClass} {Player.Name} ({Player.Health} / {Player.maxHealth}) оглушен(-а) и пропускает ход.");
+            Console.WriteLine($"{Player.typeClass} {Player.Name} ({Player.Health} из {Player.maxHealth} hp) оглушен(-а) и пропускает ход.");
         }
 
         public void Winner(Player Player)
         {
-            Console.WriteLine($"{Player.typeClass} {Player.Name} ({Player.Health} / {Player.maxHealth}) победил(-а)!");
+            Console.WriteLine($"{Player.typeClass} {Player.Name} ({Player.Health} из {Player.maxHealth} hp) победил(-а)!");
         }
 
         public void Death(Player Player)

@@ -8,7 +8,7 @@ namespace RPG
         : base()
         {
             typeClass = "Маг";
-            skills = new string[] { "Заворожение", "Метеор" };
+            skills = new string[] { "Заворожение", "Огненный шар" };
         }
 
         public override void Skill(out string skillName, out int damage)
@@ -20,7 +20,7 @@ namespace RPG
             }
             else
             {
-                skillName = "Метеор";
+                skillName = "Огненный шар";
             }
 
             switch (skillName)
@@ -29,7 +29,7 @@ namespace RPG
                     sleepTime = 2;
                     damage = 0;
                     break;
-                case "Метеор":
+                case "Огненный шар":
                     damage = (int)Math.Floor(Strength * 2.5);
                     break;
                 default:

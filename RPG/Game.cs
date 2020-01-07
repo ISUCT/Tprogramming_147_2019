@@ -20,12 +20,11 @@ namespace RPG
                 Fight();
             }
 
-            Console.WriteLine($"\n=========\nПобедитель в игре - {Players[0].typeClass} {Players[0].Name}\n=========");
+            Console.WriteLine($"\nПобедитель: {Players[0].typeClass} {Players[0].Name}\n");
         }
 
         public void CreatePlayers(int numOfPlayers)
         {
-
             while (numOfPlayers > 0)
             {
                 switch (random.Next(0, 3))
@@ -97,8 +96,9 @@ namespace RPG
 
             int turn = random.Next(0, 1);
             counter++;
-            Console.WriteLine("=========");
-            Console.WriteLine($"Бой №{counter}");
+            Console.WriteLine("\n");
+            Console.WriteLine($"{counter} бой");
+            Console.WriteLine("\n");
 
             while (true)
             {

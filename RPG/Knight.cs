@@ -8,7 +8,7 @@ namespace RPG
         : base()
         {
             typeClass = "Рыцарь";
-            skills = new string[] { "Удар возмездия", "Удар с размаху", "Раскол земли" };
+            skills = new string[] { "Удар возмездия", "Буря клинков", "Удар смерти" };
         }
 
         public override void Skill(out string skillName, out int damage)
@@ -20,11 +20,11 @@ namespace RPG
             }
             else if (probability <= 90)
             {
-                skillName = "Удар с размаху";
+                skillName = "Буря клинков";
             }
             else
             {
-                skillName = "Раскол земли";
+                skillName = "Удар смерти";
             }
 
             switch (skillName)
@@ -32,10 +32,10 @@ namespace RPG
                 case "Удар возмездия":
                     damage = (int)Math.Floor(Strength * 1.5);
                     break;
-                case "Удар с размаху":
+                case "Буря клинков":
                     damage = (int)Math.Floor(Strength * 1.3);
                     break;
-                case "Раскол земли":
+                case "Удар смерти":
                     sleepTime = 3;
                     damage = (int)Math.Floor(Strength * 2.5);
                     break;

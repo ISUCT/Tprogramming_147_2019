@@ -8,7 +8,7 @@ namespace RPG
         : base()
         {
             typeClass = "Лучник";
-            skills = new string[] { "Огненные стрелы", "Град стрел", "Мощный выстрел" };
+            skills = new string[] { "Огненные стрелы", "Шквал стрел", "Стрела правосудия" };
         }
 
         public override void Skill(out string skillName, out int damage)
@@ -18,7 +18,7 @@ namespace RPG
             {
                 if (probability <= 20)
                 {
-                    skillName = "Мощный выстрел";
+                    skillName = "Стрела правосудия";
                 }
                 else if (probability <= 90)
                 {
@@ -26,27 +26,27 @@ namespace RPG
                 }
                 else
                 {
-                    skillName = "Град стрел";
+                    skillName = "Шквал стрел";
                 }
             }
             else
             {
                 if (probability <= 70)
                 {
-                    skillName = "Мощный выстрел";
+                    skillName = "Стрела правосудия";
                 }
                 else
                 {
-                    skillName = "Град стрел";
+                    skillName = "Шквал стрел";
                 }
             }
 
             switch (skillName)
             {
-                case "Мощный выстрел":
+                case "Стрела правосудия":
                     damage = (int)(Strength * 1.5);
                     break;
-                case "Град стрел":
+                case "Шквал стрел":
                     damage = (int)(Strength * 2.5);
                     break;
                 case "Огненные стрелы":
