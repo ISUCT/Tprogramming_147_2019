@@ -11,12 +11,12 @@ namespace CourseApp
         {
         }
 
-        public Pistol(string model, double kalibr, bool fire)
-        : base(model, kalibr, fire)
+        public Pistol(string model, double kalibr, bool hit)
+        : base(model, kalibr, hit)
         {
             Model = model;
             Kalibr = kalibr;
-            Fire = fire;
+            Hit = hit;
         }
 
         public override string Model { get; set; }
@@ -41,28 +41,23 @@ namespace CourseApp
             }
         }
 
-        public override bool Fire { get; set; }
+        public override bool Hit { get; set; }
 
-        public override bool CanShoot
+        public override string Shoot(bool hit)
         {
-            get { return this.Fire; }
-        }
-
-        public override string Shoot(bool canShoot)
-        {
-            if (canShoot == true)
+            if (hit == true)
             {
-                return $"Pistol {Model} and {Kalibr} made the shot!";
+                return $"Pistol {Model} and {Kalibr} hit!";
             }
             else
             {
-                return $"Pistol {Model} and {Kalibr} not made the shot!";
+                return $"Pistol {Model} and {Kalibr} not hit!";
             }
         }
 
         public override string ToString()
         {
-            return $"Pistil-{Model}, {Kalibr}, {Fire}";
+            return $"Pistil-{Model}, {Kalibr}, {Hit}";
         }
 
         public override string NumShoot(int shot)

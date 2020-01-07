@@ -4,26 +4,24 @@ namespace CourseApp
 {
     public abstract class Weapon
     {
-        public Weapon(string model, double kalibr, bool fire)
+        public Weapon(string model, double kalibr, bool hit)
         {
             Model = model;
             Kalibr = kalibr;
-            Fire = fire;
+            Hit = hit;
         }
 
         public virtual string Model { get; set; }
 
         public virtual double Kalibr { get; set; }
 
-        public virtual bool Fire { get; set; }
-
-        public virtual bool CanShoot { get; set; }
+        public virtual bool Hit { get; set; }
 
         public abstract string Shoot(bool canShoot);
 
         public new virtual string ToString()
         {
-            return $"Weapon-{Model}, {Kalibr}, {Fire}";
+            return $"Weapon-{Model}, {Kalibr}, {Hit}";
         }
 
         public virtual string NumShoot(int shot)

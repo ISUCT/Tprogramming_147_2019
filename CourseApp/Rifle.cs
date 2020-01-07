@@ -11,12 +11,12 @@ namespace CourseApp
         {
         }
 
-        public Rifle(string model, double kalibr, bool fire)
-        : base(model, kalibr, fire)
+        public Rifle(string model, double kalibr, bool hit)
+        : base(model, kalibr, hit)
         {
             Model = model;
             Kalibr = kalibr;
-            Fire = fire;
+            Hit = hit;
         }
 
         public override double Kalibr
@@ -39,14 +39,9 @@ namespace CourseApp
             }
         }
 
-        public override bool CanShoot
-        {
-            get { return this.Fire; }
-        }
-
         public override string ToString()
         {
-            return $"Rifle-{Model}, {Kalibr}, {Fire}";
+            return $"Rifle-{Model}, {Kalibr}, {Hit}";
         }
 
         public override string Shoot(bool canShoot)

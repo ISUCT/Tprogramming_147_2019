@@ -11,7 +11,7 @@ namespace CourseApp.Tests
             var item = new Pistol();
             Assert.Equal(0, item.Kalibr);
             Assert.Equal("No model", item.Model);
-            Assert.True(item.Fire);
+            Assert.True(item.Hit);
         }
 
         [Fact]
@@ -27,7 +27,7 @@ namespace CourseApp.Tests
         {
             var item = new Pistol("Glock", 10, true);
             var act = item.Shoot(true);
-            Assert.Equal($"Pistol Glock and 10 made the shot!", act);
+            Assert.Equal($"Pistol Glock and 10 hit!", act);
         }
 
         [Fact]
