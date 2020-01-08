@@ -96,9 +96,9 @@ namespace RPG
 
             int turn = random.Next(0, 1);
             counter++;
-            Console.WriteLine("\n////////////");
+            Console.WriteLine("\n/////////////");
             Console.WriteLine($"{counter} бой");
-            Console.WriteLine("////////////\n");
+            Console.WriteLine("/////////////\n");
 
             while (true)
             {
