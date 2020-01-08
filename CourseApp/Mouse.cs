@@ -2,16 +2,16 @@ using System;
 
 namespace CourseApp
 {
-    public class Platypus
+    public class Mouse
     {
         private int age;
 
-        public Platypus()
+        public Mouse()
         : this(0, "Untitled", true)
         {
         }
 
-        public Platypus(int age, string name, bool isMale)
+        public Mouse(int age, string name, bool isMale)
         {
             Name = name;
             Age = age;
@@ -35,26 +35,36 @@ namespace CourseApp
                 }
                 else
                 {
-                    Console.WriteLine("Age should be > 0 and < than 20");
+                    throw new System.Exception("Age should be > 0 and < than 20");
                 }
             }
         }
 
         public bool IsMale { get; set; }
 
-        public bool IsPoisoned
-        {
-            get { return this.IsMale; }
-        }
-
         public string View()
         {
-            return @"
-         _.-^~~^^^`~-,_,,~''''''```~,''``~'``~,
- ______,'  -o  :.  _    .          ;     ,'`,  `.
-(      -\.._,.;;'._ ,(   }        _`_-_,,    `, `,
- ``~~~~~~'   ((/'((((____/~~~~~~'(,(,___>      `~'
- ";
+            return "```оО````\n ```•._)~``\n ``````````";
+        }
+
+        public string Peep()
+        {
+            return "Mouse squeaks.";
+        }
+
+        public override string ToString()
+        {
+            string s;
+            if (this.IsMale)
+            {
+                s = "He";
+            }
+            else
+            {
+                s = "She";
+            }
+
+            return $"The mouse's name is {Name}.{s} is {Age} years old.";
         }
     }
 }
