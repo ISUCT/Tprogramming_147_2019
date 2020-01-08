@@ -11,6 +11,5 @@ namespace CourseApp.Tests
         {
             Assert.True(true);
         }
-
     }
 }
