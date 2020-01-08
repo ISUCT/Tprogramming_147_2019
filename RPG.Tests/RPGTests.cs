@@ -29,7 +29,7 @@ namespace RPG.Tests
 
             knight.Skill(out skillName, out damage);
 
-            if ((skillName == "Удар возмездия" || skillName == "Удар с размаху" || skillName == "Раскол земли") && damage > 0)
+            if ((skillName == "Удар возмездия" || skillName == "Буря клинков" || skillName == "Удар смерти") && damage > 0)
             {
                 Assert.True(true);
             }
@@ -49,7 +49,7 @@ namespace RPG.Tests
             {
                 Assert.True(true);
             }
-            else if ((skillName == "Мощный выстрел" || skillName == "Град стрел") && damage > 0)
+            else if ((skillName == "Стрела правосудия" || skillName == "Шквал стрел") && damage > 0)
             {
                 Assert.True(true);
             }
@@ -69,7 +69,7 @@ namespace RPG.Tests
             {
                 Assert.True(true);
             }
-            else if (skillName == "Метеор" && damage > 0)
+            else if (skillName == "Огненный шар" && damage > 0)
             {
                 Assert.True(true);
             }
