@@ -9,7 +9,7 @@ namespace CourseApp.Tests
         public void TestDate()
         {
             var res = new AgeCalc();
-            Assert.Equal("Вам 19 лет, 2 месяцев, 19 дней", res.CalcAge(22, 10, 2000));
+            Assert.Equal("Вам 19 лет, 2 месяцев, 18 дней", res.CalcAge(22, 10, 2000, 8, 1, 2020));
         }
 
         [Fact]
@@ -18,7 +18,7 @@ namespace CourseApp.Tests
             var res = new AgeCalc();
             try
             {
-                res.CalcAge(27, 11, 2025);
+                res.CalcAge(27, 11, 2025, 8, 1, 2020);
                 Assert.True(false);
             }
             catch
