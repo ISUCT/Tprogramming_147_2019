@@ -20,7 +20,7 @@ namespace CourseApp
 
             if (birthday.Ticks > now.Ticks)
             {
-                throw new Exception("плохая дата;)");
+                throw new Exception("очень плохая дата;)");
             }
             else if (birthday.Ticks == now.Ticks)
             {
