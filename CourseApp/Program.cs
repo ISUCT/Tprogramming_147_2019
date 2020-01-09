@@ -7,7 +7,8 @@ namespace CourseApp
     {
             public static double Func(double b, double x)
             {
-                 var y = (1 + Math.Pow(Math.Sin(Math.Pow(b, 3) + Math.Pow(x, 3)), 2)) / Math.Pow(Math.Pow(b, 3) + Math.Pow(x, 3), 1 / 3f);
+                var y = (1 + Math.Pow(Math.Sin(Math.Pow(b, 3) + Math.Pow(x, 3)), 2)) / Math.Pow(Math.Pow(b, 3) + Math.Pow(x, 3), 1 / 3f);
+
                 return y;
             }
 
@@ -20,9 +21,9 @@ namespace CourseApp
             {
                 y.Add(Func(b, x));
                 i++;
-			}
+            }
 
-			return y;
+            return y;
         }
 
         public static List<double> TaskB(double b, List<double> x)
@@ -38,15 +39,15 @@ namespace CourseApp
 
         public static void Main(string[] args)
         {
-			double xn = 1.280;
-			double xk = 3.280;
-			double dx = 0.4;
-			double b = 2.5;
-			Console.WriteLine("Answer Task A :");
-			   foreach (var item in TaskA(b, xn, xk, dx))
-			    {
-			     	Console.WriteLine($"y = {item}");
-			    }
+            double xn = 1.280;
+            double xk = 3.280;
+            double dx = 0.4;
+            double b = 2.5;
+            Console.WriteLine("Answer Task A :");
+            foreach (var item in TaskA(b, xn, xk, dx))
+            {
+                Console.WriteLine($"y = {item}");
+            }
 
             List<double> x = new List<double> { 1.1, 2.4, 3.6, 1.7, 3.9 };
             var resultTaskB = TaskB(b, x);

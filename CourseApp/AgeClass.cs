@@ -24,8 +24,7 @@ namespace CourseApp
             int months = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введите день своего рождения:");
             int days = Convert.ToInt32(Console.ReadLine());
-            DateTime BirthDay = new DateTime(years, months, days);
-            DateTime result = new DateTime(DateTime.Now.Ticks - BirthDay.Ticks);
+            DateTime result = CompareTheDate(new DateTime(years, months, days), DateTime.Now);
             return $"Вам {result.Year - 1} лет, {result.Month - 1} месяцев и {result.Day - 1} дней";
         }
 

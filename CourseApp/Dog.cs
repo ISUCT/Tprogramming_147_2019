@@ -5,8 +5,6 @@ namespace CourseApp
 {
     public class Dog : Animal
     {
-        public string Breed { get; set; }
-
         public Dog()
         : this("Test")
         {
@@ -44,6 +42,8 @@ namespace CourseApp
                 }
             }
         }
+
+        public string Breed { get; set; }
 
         public override void Voice()
         {

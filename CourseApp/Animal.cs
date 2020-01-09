@@ -5,11 +5,9 @@ namespace CourseApp
 {
     public abstract class Animal
     {
-        public int age;
+        private int age;
 
-        public string gender;
-
-        public string Name { get; set; }
+        private string gender;
 
         public Animal()
         : this("Test")
@@ -40,6 +38,8 @@ namespace CourseApp
                 this.age = value;
             }
         }
+
+        public string Name { get; set; }
 
         public virtual string Gender
         {

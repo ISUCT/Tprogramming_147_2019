@@ -34,14 +34,14 @@ namespace CourseApp
         {
             get
             {
-                return this.age;
+                return this.Age;
             }
 
             set
             {
                 if (value >= 1 && value <= 15)
                 {
-                    base.age = value;
+                    base.Age = value;
                 }
                 else
                 {
@@ -54,14 +54,14 @@ namespace CourseApp
         {
             get
             {
-                return this.gender;
+                return this.Gender;
             }
 
             set
             {
                 if (value == "male" || value == "female")
                 {
-                    this.gender = value;
+                    this.Gender = value;
                 }
                 else
                 {
