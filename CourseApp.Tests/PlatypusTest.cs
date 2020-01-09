@@ -1,3 +1,4 @@
+//20 вариант
 using System;
 using Xunit;
 

@@ -1,35 +1,82 @@
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace CourseApp.Tests
 {
     public class DemoTest
     {
-        [Theory]
-        [InlineData(0, 0, 0, double.NaN)]
-        [InlineData(1, 1, 2, 2.5)]
-        [InlineData(-1, 1, 1, 0)]
-        public void TestCalc(double a, double b, double x, double exp)
+        [Fact]
+        public void Test1()
         {
-            var res = Program.MyFunction(a, b, x);
-            Assert.Equal(exp, res, 3);
+            Assert.True(true);
         }
 
         [Fact]
-        public void TestNormalA()
+        public void TestMyFunctionNaN()
         {
+            var res = Functions.MyFunction(0.0, 0.0, 0.0);
+            Assert.Equal(double.NaN, res);
         }
 
         [Fact]
-        public void TestNormalB()
+        public void TestEmptyListA()
         {
+            double a = 0.1;
+            double b = 0.5;
+            double xn = 1.37;
+            double xk = 2.57;
+            double dx = 0.3;
+            Assert.Empty(Functions.TaskA(a, b, xn, xk, dx));
         }
 
         [Fact]
-        public void TestZeroLengthB()
+        public void TestTaskA()
         {
-            var res = Program.TaskB(1, 1, new double[0]);
-            Assert.Empty(res);
+            double a = 0.8;
+            double b = 0.4;
+            double xn = 1.23;
+            double xk = 7.23;
+            double dx = 0.3;
+            List<double> res = Functions.TaskA(a, b, xn, xk, dx);
+            List<double> expy = new List<double> { 2.237126168657003, 2.215581361121909, 2.5269082194827885, 2.785377126824208, 3.0079000350329963 };
+            for (int i = 0; i < 5; i++)
+            {
+                Assert.Equal(expy[i], res[i], 3);
+            }
+        }
+
+        [Fact]
+        public void TestXnMoreThenXk()
+        {
+            List<double> res = Functions.TaskA(0.8, 0.4, 1.23, 7.23, 1.2);
+            Assert.Equal(res, new List<double>());
+        }
+
+        [Fact]
+        public void TestDx()
+        {
+            List<double> res = Functions.TaskA(0.8, 0.4, 1.23, 7.23, 1.2);
+            Assert.Equal(res, new List<double>());
+        }
+
+        [Fact]
+        public void TestEmptyListB()
+        {
+            List<double> x = new List<double>();
+                Assert.Empty(Functions.TaskB(0.8, 0.4, x));
+        }
+
+        [Fact]
+        public void TestTaskB()
+        {
+            List<double> x = new List<double> { 1.88, 2.26, 3.84, 4.55, -6.21 };
+            List<double> res = Functions.TaskB(0.8, 0.4, x);
+            List<double> expy = new List<double> { 2.0558467733507353, 2.1665433513017915, 2,5754036757838303, 2,7287991234367484, double.NaN };
+            for (int i = 0; i < 5; i++)
+            {
+                Assert.Equal(expy[i], res[i], 3);
+            }
         }
     }
 }

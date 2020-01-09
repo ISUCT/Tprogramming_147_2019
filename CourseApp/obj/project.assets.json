@@ -36,11 +36,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Елисей\\Desktop\\Work\\Tprogramming_147_2019\\CourseApp\\CourseApp.csproj",
+      "projectUniqueName": "C:\\Users\\Елисей\\Desktop\\GIT\\CourseApp\\CourseApp.csproj",
       "projectName": "CourseApp",
-      "projectPath": "C:\\Users\\Елисей\\Desktop\\Work\\Tprogramming_147_2019\\CourseApp\\CourseApp.csproj",
+      "projectPath": "C:\\Users\\Елисей\\Desktop\\GIT\\CourseApp\\CourseApp.csproj",
       "packagesPath": "C:\\Users\\Елисей\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Елисей\\Desktop\\Work\\Tprogramming_147_2019\\CourseApp\\obj\\",
+      "outputPath": "C:\\Users\\Елисей\\Desktop\\GIT\\CourseApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Елисей\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -57,6 +57,7 @@
         }
       },
       "warningProperties": {
+        "allWarningsAsErrors": true,
         "warnAsError": [
           "NU1605"
         ]
