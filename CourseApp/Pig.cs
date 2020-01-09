@@ -1,29 +1,28 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace CourseApp
 {
-    public class Pig
+    public class Pig : Animal
     {
         private int salo;
-        private int age;
-        private string gender;
-        public string Name { get; set; }
+
         public Pig()
-        : this("Test")
+        : base("Test")
         {
         }
 
         public Pig(string name)
-        : this(name, 1,"male")
+        : base(name, 0, "male")
         {
         }
 
-        public Pig(string name, int age, string gender)
-        : this(name, age, 1, "male")
+        public Pig(string name, int age)
+        : this(name, age, 0, "male")
         {
         }
-        
+
         public Pig(string name, int age, int salo, string gender)
         {
             Name = name;
@@ -32,42 +31,6 @@ namespace CourseApp
             Gender = gender;
         }
 
-        public int Age
-        {
-            get
-            {
-                return this.age;
-            }
-            set
-            {
-                if (value >= 1 && value <= 15)
-                {
-                    this.age = value;
-                }
-                else
-                {
-                    Console.WriteLine("Возраст свиньи должен быть менее 15.");
-                }
-            }
-        }
-        public string Gender
-        {
-            get
-            {
-                return this.gender;
-            }
-            set
-            {
-                if (value == "male" || value == "female")
-                {
-                    this.gender = value;
-                }
-                else
-                {
-                    throw new System.Exception();
-                }
-            }
-        }
         public int Salo
         {
             get
@@ -77,7 +40,7 @@ namespace CourseApp
 
             set
             {
-                if (value >= 0)
+                if (value >= 1)
                 {
                     this.salo = value;
                 }
@@ -88,23 +51,16 @@ namespace CourseApp
             }
         }
 
+        public override void Voice()
+        {
+            Console.WriteLine("Хрю-хрю :)");
+        }
+
         public override string ToString()
         {
             return $"Имя:{Name},Возраст:{Age},Cало:{Salo}";
-            return @"       _       
-      (_)      
- _ __  _  __ _ 
-| '_ \| |/ _` |
-| |_) | | (_| |
-| .__/|_|\__, |
-| |       __/ |
-|_|      |___/ 
-";
         }
-        public void Aging()
-        {
-            this.age++;
-        }
+
         public void LostSalo()
         {
             this.salo--;
