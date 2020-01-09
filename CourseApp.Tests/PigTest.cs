@@ -16,9 +16,9 @@ namespace CourseApp.Tests
         }
 
         [Theory]
-        [InlineData("PigMan", 5, 7,"male")]
-        [InlineData("PigGirl", 2, 1,"female")]
-        [InlineData("PigPigger", 10, 11,"male")]
+        [InlineData("PigMan", 5, 7, "male")]
+        [InlineData("PigGirl", 2, 1, "female")]
+        [InlineData("PigPigger", 10, 11, "male")]
 
         public void TestFullConstructor(string name, int age, int salo, string gender)
         {

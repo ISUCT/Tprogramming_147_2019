@@ -19,7 +19,7 @@ namespace CourseApp.Tests
         public void ZeroFunction()
         {
             var res = Program.Func(0.0, 0.0);
-            Xunit.Assert.Equal(double.PositiveInfinity, res);
+            Assert.Equal(double.PositiveInfinity, res);
         }
 
         [Fact]
@@ -27,7 +27,7 @@ namespace CourseApp.Tests
         {
             List<double> mass = new List<double>();
             var res = Program.TaskB(2, mass);
-            Xunit.Assert.Equal(mass, res);
+            Assert.Equal(mass, res);
         }
 
         [Fact]
@@ -35,10 +35,10 @@ namespace CourseApp.Tests
         {
             List<double> x = new List<double> { 1.1, 2.4, 3.6, 1.7, 3.9 };
             var resultB = Program.TaskB(2.5, x);
-            var exp = new List<double>  { 0.739333760444302, 0.599437811110944, 0.321394270206876, 0.725284786782826, 0.282846892996087 };
+            var exp = new List<double> { 0.739333760444302, 0.599437811110944, 0.321394270206876, 0.725284786782826, 0.282846892996087 };
             for (int i = 0; i < resultB.Count; i++)
             {
-                Xunit.Assert.Equal(exp[i], resultB[i], 3);
+                Assert.Equal(exp[i], resultB[i], 3);
             }
         }
     }
