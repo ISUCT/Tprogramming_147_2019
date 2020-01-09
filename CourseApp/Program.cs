@@ -17,13 +17,10 @@ namespace CourseApp
                                      double xk,
                                      double dx)
         {
-            var steps = (int)Math.Floor((xk - xn) / dx);
             var y = new List<double>();
-            var i = 0;
             for (var x = xn; x < xk; x += dx)
             {
                 y.Add(MyFunction(a, x));
-                i++;
             }
 
             return y;

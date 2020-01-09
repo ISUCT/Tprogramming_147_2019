@@ -200,6 +200,9 @@ $RECYCLE.BIN/
 # Added by Jskonst
 Properties/
 
+#Added Anastasia
+git.*
+
 #####
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####
