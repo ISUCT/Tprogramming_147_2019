@@ -144,7 +144,7 @@ UpgradeLog*.htm
 *.txt~
 *.swp
 *.swo
- 
+
 # svn
 .svn
 
@@ -201,7 +201,7 @@ $RECYCLE.BIN/
 Properties/
 
 #Added Anastasia
-git.*
+git
 
 #####
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
