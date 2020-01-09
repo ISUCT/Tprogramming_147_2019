@@ -2,9 +2,9 @@ using System;
 
 namespace CourseApp
 {
-    public class Auto
+    public class Auto : Transport
     {
-        private int speed;
+        private string color;
 
         public Auto()
         : this("Untitled")
@@ -17,44 +17,45 @@ namespace CourseApp
         }
 
         public Auto(string name, int year)
-        : this(name, year, 60)
+        : this(name, year, 60, "black")
         {
         }
 
-        public Auto(string name, int year, int speed)
+        public Auto(string name, int year, int speed, string color)
+        : base(name, year, speed)
         {
-            this.speed = speed;
-            this.Name = name;
-            this.Year = year;
+            this.color = color;
         }
 
-        public int Speed
+        public string Color
         {
             get
             {
-                return this.speed;
+                return this.color;
             }
 
             set
             {
-                if (value >= 0 && value < 300)
+                if (value == "white" || value == "black" || value == "green")
                 {
-                    this.speed = value;
+                    this.color = value;
                 }
                 else
                 {
-                    throw new System.Exception("Speed should be more 0 and less than 300");
+                    throw new System.Exception();
                 }
             }
         }
 
-        public string Name { get; set; }
-
-        public int Year { get; set; }
+        public override string Info()
+        {
+            string s = $"This car is {2020 - Year} years old.";
+            return s;
+        }
 
         public override string ToString()
         {
-            string s = $"The car {Name}({Year}) is moving at a speed of {Speed} km/h.";
+            string s = $"The {Color} car {Name}({Year}) is moving at a speed of {Speed} km/h.";
             return s;
         }
     }

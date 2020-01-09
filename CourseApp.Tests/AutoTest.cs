@@ -79,5 +79,36 @@ namespace CourseApp.Tests
             item.Year = 1972;
             Assert.Equal(1972, item.Year);
         }
+
+        [Fact]
+        public void TestSetColor()
+        {
+            var item = new Auto();
+            item.Color = "white";
+            Assert.Equal("white", item.Color);
+        }
+
+        [Fact]
+        public void TestIncorrectSetColor()
+        {
+            var item = new Auto();
+
+            try
+            {
+                item.Color = "blue";
+            }
+            catch (System.Exception)
+            {
+                Assert.True(true);
+            }
+        }
+
+        [Fact]
+        public void TestOverride()
+        {
+            var item = new Auto();
+            Assert.Equal("The black car Untitled(2000) is moving at a speed of 60 km/h.", item.ToString());
+            Assert.Equal("This car is 20 years old.", item.Info());
+        }
     }
 }

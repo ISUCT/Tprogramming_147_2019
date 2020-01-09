@@ -58,14 +58,29 @@ namespace CourseApp
                 Console.WriteLine($"x={xB[i]} y={taskB[i]}");
             }
 
-            Auto[] cars = new Auto[3];
-            cars[0] = new Auto("Mercedes Benz", 2005, 60);
-            cars[1] = new Auto("bugatti veyron", 2011, 150);
-            cars[2] = new Auto("lada vesta", 2005, 75);
-            for (int i = 0; i < 3; i++)
+            Console.WriteLine("==========");
+
+            Transport[] ar = new Transport[2];
+            ar[0] = new Motocycle("harley davidson", 2005, 60, 300);
+            ar[1] = new Auto("BMW x5", 2010, 120, "white");
+            foreach (var item in ar)
             {
-                Console.WriteLine(cars[i].ToString());
+                Console.WriteLine(item);
+                Console.WriteLine(item.ToString());
+                Console.WriteLine(item.Info());
+                Console.WriteLine();
             }
+
+            Console.WriteLine("==========");
+            Console.WriteLine("Введите год своего рождения:");
+            int years = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите месяц своего рождения:");
+            int months = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите день своего рождения:");
+            int days = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine(AgeClass.Age(new DateTime(years, months, days)));
+            Console.WriteLine("==========");
 
             Console.ReadLine();
         }
