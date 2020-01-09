@@ -14,7 +14,7 @@ namespace RPG.Tests
             Hero wizard = new Wizard();
             Hero necromancer = new Necromancer();
 
-            if(knight.Health > 0 && knight.Strength > 0 && archer.Health > 0 && archer.Strength > 0 && wizard.Health > 0 && wizard.Strength > 0 && necromancer.Health > 0 && necromancer.Strength > 0 )
+            if (knight.Health > 0 && knight.Strength > 0 && archer.Health > 0 && archer.Strength > 0 && wizard.Health > 0 && wizard.Strength > 0 && necromancer.Health > 0 && necromancer.Strength > 0)
             {
                 Assert.True(true);
             }
@@ -30,7 +30,7 @@ namespace RPG.Tests
 
             knight.Skill(out skillName, out damage);
 
-            if((skillName == "Удар возмездия" || skillName == "Удар с размаху" || skillName == "Раскол земли") && damage > 0)
+            if ((skillName == "Удар возмездия" || skillName == "Удар с размаху" || skillName == "Раскол земли") && damage > 0)
             {
                 Assert.True(true);
             }
@@ -46,7 +46,7 @@ namespace RPG.Tests
 
             necromancer.Skill(out skillName, out damage);
 
-            if((skillName == "Мрачная жатва" || skillName == "Трупное копье" || skillName == "Вампиризм") && damage > 0)
+            if ((skillName == "Мрачная жатва" || skillName == "Трупное копье" || skillName == "Вампиризм") && damage > 0)
             {
                 Assert.True(true);
             }
@@ -62,11 +62,11 @@ namespace RPG.Tests
 
             archer.Skill(out skillName, out damage);
 
-            if(skillName == "Самонаводящаяся стрела" && archer.buf && damage == 0)
+            if (skillName == "Самонаводящаяся стрела" && archer.buf && damage == 0)
             {
                 Assert.True(true);
             }
-            else if((skillName == "Скоростная стрельба" || skillName == "Стрела стихий") && damage > 0)
+            else if ((skillName == "Скоростная стрельба" || skillName == "Стрела стихий") && damage > 0)
             {
                 Assert.True(true);
             }
@@ -82,11 +82,11 @@ namespace RPG.Tests
 
             wizard.Skill(out skillName, out damage);
 
-            if(skillName == "Объятия смерти" && wizard.sleepTime > 0 && damage == 1)
+            if (skillName == "Объятия смерти" && wizard.sleepTime > 0 && damage == 1)
             {
                 Assert.True(true);
             }
-            else if(skillName == "Жатва душ" && damage > 0)
+            else if (skillName == "Жатва душ" && damage > 0)
             {
                 Assert.True(true);
             }
@@ -111,7 +111,7 @@ namespace RPG.Tests
 
             archer.Atack(out damage);
 
-            if(damage > 0)
+            if (damage > 0)
             {
                 Assert.True(true);
             }
