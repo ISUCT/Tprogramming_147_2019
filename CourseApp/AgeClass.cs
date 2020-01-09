@@ -11,6 +11,12 @@ namespace CourseApp
             return $"Вам {result.Year - 1} лет, {result.Month - 1} месяцев и {result.Day - 1} дня";
         }
 
+        public static string Age(DateTime date1, DateTime date2)
+        {
+            DateTime result = DateCompare(date1, date2);
+            return $"Вам {result.Year - 1} лет, {result.Month - 1} месяцев и {result.Day - 1} дня";
+        }
+
         public static DateTime DateCompare(DateTime date1, DateTime date2)
         {
             if (date1.Ticks < date2.Ticks)
