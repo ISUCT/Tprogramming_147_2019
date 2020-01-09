@@ -1,11 +1,8 @@
 {
 	"folders": [
 		{
-			"path": "CourseApp"
+			"path": "RPG"
 		},
-		{
-			"path": "CourseApp.Tests"
-		}
 	],
 	"settings": {}
 }
