@@ -21,3 +21,11 @@ jobs:
       run: |
         cd CourseApp.Tests
         dotnet test
+    - name: Build with dotnet
+      run: |
+        cd RPG
+        dotnet build --configuration Release
+    - name: Run tests
+      run: |
+        cd RPG.Tests
+        dotnet test
