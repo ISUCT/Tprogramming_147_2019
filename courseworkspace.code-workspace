@@ -5,6 +5,12 @@
 		},
 		{
 			"path": "CourseApp.Tests"
+		},
+		{
+			"path": "RPG"
+		},
+		{
+			"path": "RPG.Tests"
 		}
 	],
 	"settings": {}

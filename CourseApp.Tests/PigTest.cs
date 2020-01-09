@@ -9,16 +9,17 @@ namespace CourseApp.Tests
         public void TestEmptyConstructor()
         {
             var item = new Pig();
-            Assert.Equal(1, item.Age);
+            Assert.Equal(0, item.Age);
             Assert.Equal("Test", item.Name);
-            Assert.Equal(1, item.Salo);
+            Assert.Equal(0, item.Salo);
             Assert.Equal("male", item.Gender);
         }
 
         [Theory]
-        [InlineData("PigMan", 5, 7,"male")]
-        [InlineData("PigGirl", 2, 1,"female")]
-        [InlineData("PigPigger", 10, 11,"male")]
+        [InlineData("PigMan", 5, 7, "male")]
+        [InlineData("PigGirl", 2, 1, "female")]
+        [InlineData("PigPigger", 10, 11, "male")]
+
         public void TestFullConstructor(string name, int age, int salo, string gender)
         {
             var item = new Pig(name, age, salo, gender);
@@ -48,7 +49,7 @@ namespace CourseApp.Tests
             {
                 Console.WriteLine("Возраст должен быть больше 1 года");
                 Assert.True(true);
-            }       
+            }
         }
     }
 }
