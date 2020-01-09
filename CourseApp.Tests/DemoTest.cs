@@ -8,12 +8,13 @@ namespace CourseApp.Tests
     {
         [Theory]
         [InlineData(0.7, 5, 0.2196741002474553)]
-        [InlineData(2.2, 1.7, 0.4091366343551351)] 
+        [InlineData(2.2, 1.7, 0.4091366343551351)]
         [InlineData(0.1, 4, 0.4617896586816621)]
         public void TestFunction(double b, double x, double exp)
         {
             Assert.Equal(Program.Func(b, x), exp, 3);
         }
+
         [Fact]
         public void ZeroFunction()
         {

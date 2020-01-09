@@ -15,6 +15,7 @@ namespace CourseApp
 
             throw new Exception();
         }
+
         public static string AgeConsole()
         {
             Console.WriteLine("Введите год своего рождения:");
@@ -33,6 +34,7 @@ namespace CourseApp
             DateTime result = CompareTheDate(new DateTime(years, months, days), DateTime.Now);
             return $"Вам {result.Year - 1} лет, {result.Month - 1} месяцев и {result.Day - 1} дней";
         }
+
         public static string Age(DateTime date)
         {
             return $"Вам {CompareTheDate(date, DateTime.Now).Year - 1} лет, {CompareTheDate(date, DateTime.Now).Month - 1} месяцев и {CompareTheDate(date, DateTime.Now).Day - 1} дней";

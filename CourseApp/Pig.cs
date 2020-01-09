@@ -6,18 +6,22 @@ namespace CourseApp
     public class Pig : Animal
     {
         private int salo;
+
         public Pig()
         : base("Test")
         {
         }
+
         public Pig(string name)
-        : base(name, 1,"male")
+        : base(name, 1, "male")
         {
         }
+
         public Pig(string name, int age, string gender)
         : this(name, age, 1, "male")
         {
         }
+
         public Pig(string name, int age, int salo, string gender)
         {
             Name = name;
@@ -25,12 +29,14 @@ namespace CourseApp
             Salo = salo;
             Gender = gender;
         }
+
         public override int Age
         {
             get
             {
                 return this.age;
             }
+
             set
             {
                 if (value >= 1 && value <= 15)
@@ -43,12 +49,14 @@ namespace CourseApp
                 }
             }
         }
+
         public override string Gender
         {
             get
             {
                 return this.gender;
             }
+
             set
             {
                 if (value == "male" || value == "female")
@@ -61,12 +69,14 @@ namespace CourseApp
                 }
             }
         }
+
         public int Salo
         {
             get
             {
                 return this.salo;
             }
+
             set
             {
                 if (value >= 1)
@@ -79,14 +89,17 @@ namespace CourseApp
                 }
             }
         }
+
         public override void Voice()
         {
             Console.WriteLine("Хрю-хрю :)");
         }
+
         public override string ToString()
         {
             return $"Имя:{Name},Возраст:{Age},Cало:{Salo}";
         }
+
         public void LostSalo()
         {
             this.salo--;
