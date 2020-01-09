@@ -62,6 +62,14 @@ namespace CourseApp
                 }
 
             Console.WriteLine("==========");
+            Animals[] animals = new Animals[2];
+            animals[0] = new Dog("White", 5, "female");
+            animals[1] = new Cat("Black");
+            foreach (Animals animal in animals)
+            {
+                animal.Info();
+                Console.WriteLine();
+            }
         }
     }
 }
