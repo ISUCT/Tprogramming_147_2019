@@ -29,10 +29,20 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void TodayBirthdayTest()
+        public void CurrentDayIsBirthdayTest()
         {
             var res = new AgeCalc();
-            Assert.Equal("Вам 0 лет, 0 месяцев, 0 дней", res.CalcAge(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year));
+            var day = DateTime.Today.Day;
+            var month = DateTime.Today.Month;
+            var year = DateTime.Today.Year;
+            try
+            {
+                Assert.Equal(res.CalcAge(12, 12, 2019, 12, 12, 2019), $"Возраст:0 лет, 0 месяцев, 0 дней");
+            }
+            catch
+            {
+                Assert.True(true);
+            }
         }
     }
 }
