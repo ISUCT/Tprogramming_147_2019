@@ -17,7 +17,7 @@ namespace CourseApp
         public Pig(string name, int age, string gender)
         : this(name, age, 1, "male")
         {
-        }       
+        }
         public Pig(string name, int age, int salo, string gender)
         {
             Name = name;
@@ -85,7 +85,7 @@ namespace CourseApp
         }
         public override string ToString()
         {
-            return $"Имя:{Name},Возраст:{Age},Cало:{Salo}";  
+            return $"Имя:{Name},Возраст:{Age},Cало:{Salo}";
         }
         public void LostSalo()
         {

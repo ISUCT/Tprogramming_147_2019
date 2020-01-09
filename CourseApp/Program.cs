@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
- 
+
 namespace CourseApp
 {
     public class Program
@@ -48,7 +48,7 @@ namespace CourseApp
                 {
                     Console.WriteLine($"y= {item}");
                 }
-            Console.WriteLine(AgeClass.Age());
+            Console.WriteLine(AgeClass.AgeConsole());
         }
     }
 }

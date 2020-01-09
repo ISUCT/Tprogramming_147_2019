@@ -29,7 +29,7 @@ namespace CourseApp
                 return this.age;
             }
             set
-            {                
+            {
                 this.age = value;
             }
         }
@@ -50,7 +50,7 @@ namespace CourseApp
                     throw new System.Exception();
                 }
             }
-        }   
+        }
         public override string ToString()
         {
             return $"Имя:{Name},Возраст:{Age},Пол:{Gender}";

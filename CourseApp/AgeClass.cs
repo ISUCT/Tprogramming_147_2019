@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
- 
+
 namespace CourseApp
 {
     public class AgeClass
@@ -12,10 +12,10 @@ namespace CourseApp
                 DateTime result = new DateTime(d2.Ticks - d1.Ticks);
                 return result;
             }
- 
+
             throw new Exception();
         }
-        public static string Age()
+        public static string AgeConsole()
         {
             Console.WriteLine("Введите год своего рождения:");
             int years = Convert.ToInt32(Console.ReadLine());
@@ -27,7 +27,7 @@ namespace CourseApp
             DateTime result = new DateTime(DateTime.Now.Ticks - BirthDay.Ticks);
             return $"Вам {result.Year - 1} лет, {result.Month - 1} месяцев и {result.Day - 1} дней";
         }
- 
+
         public static string Age(int years, int months, int days)
         {
             DateTime result = CompareTheDate(new DateTime(years, months, days), DateTime.Now);
