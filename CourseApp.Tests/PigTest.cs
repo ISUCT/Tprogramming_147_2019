@@ -9,7 +9,7 @@ namespace CourseApp.Tests
         public void TestEmptyConstructor()
         {
             var item = new Pig();
-            Assert.Equal(1, item.Age);
+            Assert.Equal(0, item.Age);
             Assert.Equal("Test", item.Name);
             Assert.Equal(0, item.Salo);
             Assert.Equal("male", item.Gender);

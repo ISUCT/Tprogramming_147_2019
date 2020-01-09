@@ -15,7 +15,7 @@ namespace CourseApp
         }
 
         public Animal(string name)
-        : this(name, 1, "male")
+        : this(name, 0, "male")
         {
         }
 
@@ -26,7 +26,9 @@ namespace CourseApp
             Gender = gender;
         }
 
-        public virtual int Age
+        public string Name { get; set; }
+
+        public int Age
         {
             get
             {
@@ -35,13 +37,18 @@ namespace CourseApp
 
             set
             {
-                this.age = value;
+                if (value >= 0 && value < 20)
+                {
+                    this.age = value;
+                }
+                else
+                {
+                    throw new System.Exception();
+                }
             }
         }
 
-        public string Name { get; set; }
-
-        public virtual string Gender
+        public string Gender
         {
             get
             {
@@ -61,12 +68,12 @@ namespace CourseApp
             }
         }
 
-        public override string ToString()
+         public override string ToString()
         {
             return $"Имя:{Name},Возраст:{Age},Пол:{Gender}";
         }
 
-        public void Ageing()
+        public void AgeUp()
         {
             this.age++;
         }

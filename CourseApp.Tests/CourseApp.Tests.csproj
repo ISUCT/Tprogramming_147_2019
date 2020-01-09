@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <CodeAnalysisRuleSet>../_stylecop/stylecop.ruleset</CodeAnalysisRuleSet> 
+    <CodeAnalysisRuleSet>../_stylecop/stylecop.ruleset</CodeAnalysisRuleSet>
     <GenerateFullPaths>true</GenerateFullPaths>
   </PropertyGroup>
 
