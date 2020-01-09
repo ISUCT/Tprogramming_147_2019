@@ -38,7 +38,7 @@ namespace CourseApp.Tests
             Assert.Equal($"Glock made of 15 shots", act);
         }
 
-         [Fact]
+        [Fact]
         public void TestCorrectIncorrectSetKalibr()
         {
             var item = new Pistol();

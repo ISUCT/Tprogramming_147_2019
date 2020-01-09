@@ -44,15 +44,15 @@ namespace CourseApp
             return $"Rifle-{Model}, {Kalibr}, {Hit}";
         }
 
-        public override string Shoot(bool canShoot)
+        public override string Shoot(bool hit)
         {
-            if (canShoot == true)
+            if (hit == true)
             {
-                return $"Rifle {Model} and {Kalibr} made the shot!";
+                return $"Rifle {Model} and {Kalibr} hit!";
             }
             else
             {
-                return $"Rifle {Model} and {Kalibr} not made the shot!";
+                return $"Rifle {Model} and {Kalibr} not hit!";
             }
         }
     }
