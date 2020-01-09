@@ -198,10 +198,7 @@ $RECYCLE.BIN/
 **/node_modules/*
 
 # Added by Jskonst
-<<<<<<< HEAD
-=======
 .vscode/
->>>>>>> 1a30883c302a9f8e4ef3c380d6a061f88385a877
 Properties/
 
 #####
