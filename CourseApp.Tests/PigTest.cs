@@ -16,8 +16,8 @@ namespace CourseApp.Tests
         }
 
         [Theory]
-        [InlineData("PigMan", 5, 7,"male")]
-        [InlineData("PigGirl", 2, 1,"female")]
+        [InlineData("PigMale", 5, 7,"male")]
+        [InlineData("PigFemale", 2, 1,"female")]
         [InlineData("PigPigger", 10, 11,"male")]
         public void TestFullConstructor(string name, int age, int salo, string gender)
         {
@@ -42,7 +42,7 @@ namespace CourseApp.Tests
             try
             {
                 var item = new Pig();
-                item.Age = -1000;
+                item.Age = -100;
             }
             catch (System.Exception)
             {
