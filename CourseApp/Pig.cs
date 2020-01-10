@@ -3,27 +3,21 @@ using System.Collections.Generic;
 
 namespace CourseApp
 {
-    public class Pig
+    public class Pig : Animal
     {
         private int salo;
-        private int age;
-        private string gender;
-        public string Name { get; set; }
         public Pig()
-        : this("Test")
+        : base("Test")
         {
         }
-
         public Pig(string name)
-        : this(name, 1,"male")
+        : base(name, 1,"male")
         {
         }
-
         public Pig(string name, int age, string gender)
         : this(name, age, 1, "male")
         {
-        }
-        
+        }       
         public Pig(string name, int age, int salo, string gender)
         {
             Name = name;
@@ -31,8 +25,7 @@ namespace CourseApp
             Salo = salo;
             Gender = gender;
         }
-
-        public int Age
+        public override int Age
         {
             get
             {
@@ -42,7 +35,7 @@ namespace CourseApp
             {
                 if (value >= 1 && value <= 15)
                 {
-                    this.age = value;
+                    base.age = value;
                 }
                 else
                 {
@@ -50,7 +43,7 @@ namespace CourseApp
                 }
             }
         }
-        public string Gender
+        public override string Gender
         {
             get
             {
@@ -74,7 +67,6 @@ namespace CourseApp
             {
                 return this.salo;
             }
-
             set
             {
                 if (value >= 0)
@@ -87,23 +79,13 @@ namespace CourseApp
                 }
             }
         }
-
+        public override void Eat()
+        {
+            Console.WriteLine("Nem Nem");
+        }
         public override string ToString()
         {
-            return $"Имя:{Name},Возраст:{Age},Cало:{Salo}";
-            return @"       _       
-      (_)      
- _ __  _  __ _ 
-| '_ \| |/ _` |
-| |_) | | (_| |
-| .__/|_|\__, |
-| |       __/ |
-|_|      |___/ 
-";
-        }
-        public void Aging()
-        {
-            this.age++;
+            return $"Имя:{Name},Возраст:{Age},Cало:{Salo}";  
         }
         public void LostSalo()
         {
