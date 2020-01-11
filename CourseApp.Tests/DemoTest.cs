@@ -13,13 +13,6 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void TestMyFunctionNaN()
-        {
-            var res = Program.MyFunction(0.0, 0.0, 0.0);
-            Assert.Equal(double.NaN, res);
-        }
-
-        [Fact]
         public void TestEmptyListA()
         {
             double a = 0.1;
@@ -37,7 +30,7 @@ namespace CourseApp.Tests
             double b = 0.4;
             double xn = 1.23;
             double xk = 7.23;
-            double dx = 0.3;
+            double dx = 1.2;
             List<double> res = Program.TaskA(a, b, xn, xk, dx);
             List<double> expy = new List<double> { 2.237126168657003, 2.215581361121909, 2.5269082194827885, 2.785377126824208, 3.0079000350329963 };
             for (int i = 0; i < 5; i++)
