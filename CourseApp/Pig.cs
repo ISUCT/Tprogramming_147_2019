@@ -1,23 +1,17 @@
 using System;
-using System.Collections.Generic;
 
 namespace CourseApp
 {
-    public class Pig : Animal
+    public class Pig
     {
         private int salo;
+        private int age;
+
         public Pig()
-        : base("Test")
+        : this("Untitled", 1, 1, "Male")
         {
         }
-        public Pig(string name)
-        : base(name, 1,"male")
-        {
-        }
-        public Pig(string name, int age, string gender)
-        : this(name, age, 1, "male")
-        {
-        }       
+
         public Pig(string name, int age, int salo, string gender)
         {
             Name = name;
@@ -25,71 +19,74 @@ namespace CourseApp
             Salo = salo;
             Gender = gender;
         }
-        public override int Age
+
+        public string Name { get; set; }
+
+        public int Age
         {
             get
             {
                 return this.age;
             }
+
             set
             {
-                if (value >= 1 && value <= 15)
-                {
-                    base.age = value;
-                }
-                else
-                {
-                    Console.WriteLine("Возраст свиньи должен быть менее 15.");
+                 if (value >= 1 && value < 10)
+                 {
+                     this.age = value;
+                     }
+                     else
+                     {
+                         Console.WriteLine("Возраст свиньи должен быть меньше 10");
+                        }
                 }
             }
-        }
-        public override string Gender
+
+        public string Gender { get; set; }
+
+        public string IsPoisoned
         {
-            get
-            {
-                return this.gender;
-            }
-            set
-            {
-                if (value == "male" || value == "female")
-                {
-                    this.gender = value;
-                }
-                else
-                {
-                    throw new System.Exception();
-                }
-            }
+            get { return this.Gender; }
         }
+
         public int Salo
         {
             get
             {
                 return this.salo;
-            }
+                }
+
             set
             {
                 if (value >= 0)
                 {
                     this.salo = value;
-                }
-                else
-                {
-                throw new System.Exception();
-                }
+                    }
+                    else
+                    {
+                        throw new System.Exception();
+                    }
             }
         }
-        public override void Eat()
+
+        public void Eat()
         {
             Console.WriteLine("Nem Nem");
         }
-        public override string ToString()
+
+        public void Old()
         {
-            return $"Имя:{Name},Возраст:{Age},Cало:{Salo}";  
+            this.age++;
         }
+
         public void LostSalo()
         {
             this.salo--;
+        }
+
+        public string View()
+        {
+            return @"PIGGEER";
         }
     }
 }

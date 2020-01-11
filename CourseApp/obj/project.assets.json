@@ -31,19 +31,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Елисей\\.nuget\\packages\\": {}
+    "C:\\Users\\Влад\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Елисей\\Desktop\\GIT\\CourseApp\\CourseApp.csproj",
+      "projectUniqueName": "C:\\Users\\Влад\\Desktop\\GITINIT\\Tprogramming_147_2019\\CourseApp\\CourseApp.csproj",
       "projectName": "CourseApp",
-      "projectPath": "C:\\Users\\Елисей\\Desktop\\GIT\\CourseApp\\CourseApp.csproj",
-      "packagesPath": "C:\\Users\\Елисей\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Елисей\\Desktop\\GIT\\CourseApp\\obj\\",
+      "projectPath": "C:\\Users\\Влад\\Desktop\\GITINIT\\Tprogramming_147_2019\\CourseApp\\CourseApp.csproj",
+      "packagesPath": "C:\\Users\\Влад\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Влад\\Desktop\\GITINIT\\Tprogramming_147_2019\\CourseApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Елисей\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Влад\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
