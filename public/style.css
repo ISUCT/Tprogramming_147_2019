@@ -1,7 +1,7 @@
 /* фон начало*/
 .jumbotron1 {
   color: rgb(255, 255, 255);
-  background-image: url("img/1.jpg");
+  background: url("img/1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
