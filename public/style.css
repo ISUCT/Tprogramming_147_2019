@@ -1,7 +1,7 @@
 /* фон начало*/
 .jumbotron1 {
   color: rgb(255, 255, 255);
-  background-image: url("img/1.jpg");
+  background-image: url("/public/img/1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -15,7 +15,7 @@
 }
 .jumbotron2 {
   color: rgb(255, 255, 255);
-  background-image: url("img/2.jpg");
+  background-image: url("/public/img/2.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -29,7 +29,7 @@
 }
 .jumbotron3 {
   color: rgb(255, 255, 255);
-  background-image: url("img/Muscle-Car-SplitShire-3D-0009.jpg");
+  background-image: url("/public/img/Muscle-Car-SplitShire-3D-0009.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
