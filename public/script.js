@@ -40,3 +40,8 @@ card
     scale: 1,
     ease: Elastic.easeInOut
   });
+
+$(document).ready(function(e) {
+  var h = $("nav").height() + 20;
+  $("body").animate({ paddingTop: h });
+});
