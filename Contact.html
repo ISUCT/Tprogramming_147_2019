@@ -15,6 +15,10 @@
     />
     <link rel="stylesheet" type="text/css" href="public/css/style.css" />
     <title>Moro WebSite</title>
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?167"></script>
+
+    <script type="text/javascript"> VK.init({apiId: 7352673, onlyWidgets: true});
+    </script>
   </head>
 
   <body>
@@ -99,8 +103,12 @@
               </a>
               </div>
             </div>
+            <div class="col-md-5">
+              <div id="vk_comments">
+                <script type="text/javascript"> VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+                </script>
+              </div>
           </div>
-        </div>
       </section>
 
         <audio src="https://raw.githubusercontent.com/DressCodeBoy/Tprogramming_147_2019/master/public/audio/Devault - Sapphire.mp3" autoplay loop>
