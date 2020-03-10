@@ -59,14 +59,20 @@ namespace CourseApp
                 Console.WriteLine($"y = {item}");
             }
 
-            Person[] people = new Person[2];
-            people[0] = new Person("Sasha", "Smirnov", 25);
-            people[1] = new Person("Polina", "Suvorova", 22);
-            foreach (var item in people)
+            Console.WriteLine();
+
+            Person[] masss = new Person[2];
+            masss[0] = new Student("Artem", "Scherbinin", 18, true, true);
+            masss[1] = new Children("Alina", "Kotova", 7, false, true);
+            foreach (var item in masss)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(item.ToString());
+                Console.WriteLine(item.Replica());
+                Console.WriteLine();
             }
 
+            Console.WriteLine(AgeClass.Age());
+            Console.WriteLine();
             Console.ReadLine();
         }
     }
