@@ -64,6 +64,7 @@ namespace CourseApp
             Person[] masss = new Person[2];
             masss[0] = new Student("Artem", "Scherbinin", 18, true, true);
             masss[1] = new Children("Alina", "Kotova", 7, false, true);
+
             foreach (var item in masss)
             {
                 Console.WriteLine(item.ToString());
@@ -71,6 +72,22 @@ namespace CourseApp
                 Console.WriteLine();
             }
 
+            Array.Sort(masss);
+            Console.WriteLine("Отсортированный по возрасту массив:");
+            foreach (Person p in masss)
+            {
+                Console.WriteLine($"{p.Name} - {p.Age}");
+            }
+
+            Person p2 = (Person)masss[1].Clone();
+            p2.Age = 20;
+            p2.Name = "Igor";
+            p2.LastName = "Antipin";
+            p2.IsMale = true;
+            Console.WriteLine("-", 10);
+            Console.WriteLine("Реализация ICloneable:");
+            Console.WriteLine($"mass[1]: {masss[1].Name} {masss[1].LastName} {masss[1].Age} {masss[1].IsMale}");
+            Console.WriteLine($"p2: {p2.Name} {p2.LastName} {p2.Age} {p2.IsMale}");
             Console.ReadLine();
         }
     }

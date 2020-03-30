@@ -2,7 +2,7 @@ using System;
 
 namespace CourseApp
 {
-    public abstract class Person
+    public abstract class Person : IComparable<Person>, ICloneable
     {
         private int age;
 
@@ -67,5 +67,15 @@ namespace CourseApp
         }
 
         public abstract string Replica();
+
+        public int CompareTo(Person p)
+        {
+            return this.Age.CompareTo(p.Age);
+        }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
     }
 }
