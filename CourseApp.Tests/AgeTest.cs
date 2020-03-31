@@ -8,12 +8,7 @@ namespace CourseApp.Tests
         [Fact]
         public void TestDate()
         {
-            double a = DateTime.Now.Ticks - new DateTime(1998, 08, 04).Ticks;
-            double b = AgeClass.DateCompare(new DateTime(1998, 08, 04), DateTime.Now).Ticks;
-            if (b - a > 0.000000001)
-            {
-                Assert.True(true);
-            }
+            Assert.Equal("Вам 21 лет, 7 месяцев и 26 дня", AgeClass.Age(04, 08, 1998));
         }
 
         [Fact]

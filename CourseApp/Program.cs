@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace CourseApp
 {
@@ -12,11 +12,15 @@ namespace CourseApp
             int months = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введите день своего рождения:");
             int days = Convert.ToInt32(Console.ReadLine());
-            if (days == 0 && months == 0)
+            try
             {
                 Console.WriteLine(AgeClass.Age(days, months, years));
             }
-            else
+            catch (Exception)
+            {
+                Console.WriteLine();
+            }
+            finally
             {
                 Console.WriteLine();
             }
