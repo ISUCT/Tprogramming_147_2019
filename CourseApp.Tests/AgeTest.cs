@@ -6,9 +6,10 @@ namespace CourseApp.Tests
     public class AgeTest
     {
         [Fact]
-        public void TestDate()
+        public void TestNormalDate()
         {
-            Assert.Equal("Вам 21 лет, 7 месяцев и 26 дня", AgeClass.Age(04, 08, 1998));
+            var result = new DateTime(DateTime.Now.Ticks - new DateTime(1998, 08, 04).Ticks);
+            Assert.Equal($"Вам {result.Year - 1} лет, {result.Month - 1} месяцев и {result.Day - 2} дня", AgeClass.Age(04, 08, 1998));
         }
 
         [Fact]
@@ -20,7 +21,7 @@ namespace CourseApp.Tests
             }
             catch (Exception)
             {
-                Console.WriteLine("Birthday == Today");
+                Console.WriteLine("Понимаю, только родился");
             }
         }
 
@@ -33,7 +34,7 @@ namespace CourseApp.Tests
             }
             catch (Exception)
             {
-                Console.WriteLine("Birthday > Today");
+                Console.WriteLine("Добро пожаловать в прошлое");
             }
         }
     }
