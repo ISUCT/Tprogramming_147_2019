@@ -1,0 +1,164 @@
+html, body {
+    background: #f3f2f3;
+    background-image: url(../Styles/images/backgroundBlue.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    color: #000000;
+}
+
+#name {
+    right: 20px;
+}
+
+#container {
+    background: rgb(202, 206, 202);
+    margin: 20px auto;
+    border-radius: 30px;
+    max-width: 900px;
+    min-width: 600px;
+    min-height: 800px;
+    max-height: 900px;
+}
+
+#header {
+    background: rgb(117, 231, 222);
+    border-radius: 30px;
+    height: 100px;
+    max-width: 900px;
+    min-width: 500px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#content {
+    background: #99CC99;
+    float: left;
+    max-width: 600px;
+    height: 400px;
+}
+
+#clear {
+    clear: both;
+}
+
+#footer {
+    background: #87b0c9;
+    height: 90px;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+h6 {
+    margin-left: 20px;
+}
+
+h1 {
+    white-space: nowrap;
+    text-align: center;
+    margin-top: 13px;
+}
+
+.nav {
+    margin-left: 10px;
+    margin-right: 20px;
+    float: right;
+}
+
+ul.hr {
+    margin-left: 10px;
+    padding: 0px;
+}
+
+ul.hr li {
+    display: inline;
+    margin-right: 5px;
+}
+
+#skills {
+    padding-right: 0;
+    background: rgb(202, 206, 202);
+    float: right;
+    margin-right: 10px;
+    margin-top: 0px;
+    max-width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    border-style: groove;
+}
+
+#info {
+    font-size: 18px;
+    max-width: 400px;
+    border-radius: 15px;
+    border-style: none;
+    margin-top: 10px;
+    float: 0.3;
+    margin-right: 0px;
+    margin-left: 220px;
+    list-style-type: none;
+}
+
+ul.info {
+    list-style-type: none;
+}
+
+ul.info li {
+    list-style-type: none;
+}
+
+#about {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 100px;
+    border-radius: 10px;
+    border-style: ridge;
+}
+
+p.text {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+img.avatar {
+    border-radius: 20ch;
+}
+
+#avatar {
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-style: none;
+}
+
+h3, h5 {
+    text-align: center;
+}
+
+#copyright {
+    float: right;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+.bold-font {
+    font-weight: 500;
+}
+
+#footerContacts {
+    float: left;
+    padding-top: 22px;
+    padding-left: 20px;
+}
+
+ul.footerContacts li {
+    margin-left: 5px;
+    list-style-type: none;
+    font-size: 19px;
+}
+
+#intendation {
+    padding-right: 10px;
+}
