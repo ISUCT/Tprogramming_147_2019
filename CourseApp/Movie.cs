@@ -2,6 +2,8 @@
 
 namespace CourseApp
 {
+
+    public class Movie : Media
     public class Movie
     {
         private int year;
@@ -12,6 +14,11 @@ namespace CourseApp
         }
 
         public Movie(int year, string name, string country)
+        : base(year, name, country)
+        {
+        }
+
+        public override int Year
         {
             Name = name;
             Year = year;
@@ -42,12 +49,12 @@ namespace CourseApp
             }
         }
 
-        public string WatchMovie()
+        public override string Check()
         {
         return $"I'm watching a movie, named {Name}, which came out in {Year} from {Country}";
         }
 
-        public string MarkMovie(int mark)
+        public override string Mark(int mark)
         {
            switch (mark)
            {
@@ -65,6 +72,17 @@ namespace CourseApp
            }
         }
 
+        public override string Send(string who)
+        {
+            return $"Hi {who}, can you check {Name}({Year}) to watch? I want you to tell me something about it as a movie expert";
+        }
+
+        public override string ToString()
+        {
+            return $"Имя: {Name}, Год: {Year}, Страна: {Country}";
+        }
+    }
+}
         public string SendMovie(string who)
         {
             return $"Hi {who}, can you check {Name}({Year}) to watch? I want you to tell me something about it as a movie expert";

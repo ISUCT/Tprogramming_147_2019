@@ -1,0 +1,80 @@
+body{
+background:url(img/papyrus-dark.png);
+font:0.9em Verdana, Arial, Helvetica, sans-serif;
+padding-top: 25px;
+width:900px;
+margin: 0 auto;
+}
+
+#header{
+height:244px;
+color: rgb(23, 23, 31);
+background:url(img/26_41.jpg) no-repeat;
+background-size: 130%;
+border-radius: 20px;
+}
+
+#header-h1{
+padding:20px;
+text-align:right;
+font-weight: lighter;
+font-variant: initial;
+}
+
+#showcase{
+height:250px;
+text-align:center;
+background:url(img/TCUmFqWkhgU.jpg) left no-repeat;
+background-size: 30%;
+border-radius: 14px;
+}
+
+#showcase p{
+text-align:right;
+font:1.9em 'Trebuchet MS', Arial, Helvetica, sans-serif;
+padding:0;
+margin:0 10px 0 300px;
+color:rgb(100, 100, 100);
+}
+
+
+#top{
+width:780px;
+height:30px;
+margin:0 auto;
+}
+
+#text{
+padding-top:10px;
+width:780px;
+margin:0 auto;
+}
+
+#text p{
+padding: 5px 30px 5px 20px;
+line-height:1.5em;
+color:rgb(220, 208, 226);
+}
+
+#text p.first:first-letter{
+font-size:2em;
+}
+
+#text h1{
+padding:0 20px;
+font:3em 'Trebuchet MS', Arial, Helvetica, sans-serif;
+color:rgb(192, 190, 187);
+}
+
+#footer{
+height:50px;
+margin-top:16px;
+margin-top:0px;
+}
+
+#footer p{
+padding:15px 30px;
+font-size:1.5em;
+text-align:center;
+color:rgb(224, 224, 223);
+}
