@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace CourseApp
 {
+    public abstract class Animals : IComparable, IMovable
     public abstract class Animals
     {
         private string sex;
@@ -57,6 +58,31 @@ namespace CourseApp
         public virtual void AgeUp()
         {
             this.Age++;
+        }
+
+        public virtual void Move()
+        {
+            Console.WriteLine("Животное идёт");
+        }
+
+        public int CompareTo(object o)
+        {
+            Animals animal = o as Animals;
+            if (animal != null)
+            {
+                if (animal.Name == this.Name)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return 1;
+                }
+            }
+            else
+            {
+                throw new Exception("Невозможно сравнить два объекта");
+            }
         }
     }
 }

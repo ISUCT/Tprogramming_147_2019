@@ -56,5 +56,18 @@ namespace CourseApp.Tests
             Assert.Equal("Собака по имени White. Её возраст - 5, пол - женский", animals[0].ToString());
             Assert.Equal("Кот по имени Black. Его возраст - 2, пол - мужской", animals[1].ToString());
         }
+
+        [Fact]
+        public void ToCompareTest()
+        {
+            Animals[] animals = new Animals[3];
+            animals[0] = new Dog("White", 5, "female");
+            animals[1] = new Cat("Black", 2, "male");
+            animals[2] = new Dog("Black");
+            if (animals[0].CompareTo(animals[1]) == 1 && animals[1].CompareTo(animals[2]) == 0)
+            {
+                Assert.True(true);
+            }
+        }
     }
 }
