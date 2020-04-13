@@ -56,6 +56,7 @@ namespace CourseApp
         {
             Console.WriteLine(this.ToString());
             Console.WriteLine(this.RunningSpeed());
+            this.Move();
         }
     }
 }

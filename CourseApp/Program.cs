@@ -57,9 +57,9 @@ namespace CourseApp
             Console.WriteLine("Задание В:");
             Console.WriteLine("==========");
             foreach (var item in taskBRes)
-                {
-                    Console.WriteLine($"y1 = {item}");
-                }
+            {
+                Console.WriteLine($"y1 = {item}");
+            }
 
             Console.WriteLine("==========");
             Animals[] animals = new Animals[2];
@@ -70,6 +70,15 @@ namespace CourseApp
                 animal.Info();
                 Console.WriteLine();
             }
+
+           if (animals[0].CompareTo(animals[1]) == 0)
+           {
+               Console.WriteLine("Животные имеют одинаковую кличку");
+           }
+           else
+           {
+               Console.WriteLine("Животные имеют разные клички");
+           }
         }
     }
 }

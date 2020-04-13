@@ -42,6 +42,11 @@ namespace CourseApp
             }
         }
 
+        public override void Move()
+        {
+            Console.WriteLine("Кот крадётся");
+        }
+
         public override string RunningSpeed()
         {
             return "Средняя скорость домашнего кота во время бега - 43 - 45 км/ч, максимальная - до 50 км/ч";
@@ -56,6 +61,7 @@ namespace CourseApp
         {
             Console.WriteLine(this.ToString());
             Console.WriteLine(this.RunningSpeed());
+            this.Move();
         }
     }
 }
