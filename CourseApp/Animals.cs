@@ -4,6 +4,7 @@ using System.Collections.Generic;
 namespace CourseApp
 {
     public abstract class Animals : IComparable, IMovable
+    public abstract class Animals
     {
         private string sex;
 
