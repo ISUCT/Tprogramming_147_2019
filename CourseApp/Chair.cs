@@ -9,15 +9,13 @@ namespace CourseApp
             CountLegs = countLegs;
         }
 
-        public double CountLegs { get; private set; }
-
         public override void Build() {
             Console.WriteLine("Build chair.");
         }
 
         public override string ToString()
         {
-            return "Chair: Weigh = " + Weight + ", Height = " + Height + ", Color = " + Color + ", Count legs = " + CountLegs;
+            return $"Chair: Weigh = {Weight}, Height = {Height}, Color = {Color}, Count legs = {CountLegs}";
         }
     }
 }

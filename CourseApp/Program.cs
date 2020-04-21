@@ -76,6 +76,19 @@ namespace CourseApp
                 new Table(400, 400, countLegs: 3),
             };
 
+            Console.WriteLine("Furniture before sort.");
+            for (var i = 0; i < furniture.Count; i++)
+            {
+                Console.WriteLine($"Furniture height = {furniture[i].Height} and weight = {furniture[i].Weight}");
+            }
+
+            Console.WriteLine("Sorted furniture.");
+            furniture.Sort();
+            for (var i = 0; i < furniture.Count; i++)
+            {
+                Console.WriteLine($"Furniture height = {furniture[i].Height} and weight = {furniture[i].Weight}");
+            }
+            
             for (int i = 0; i < furniture.Count; i++)
             {
                 furniture[i].Build();
