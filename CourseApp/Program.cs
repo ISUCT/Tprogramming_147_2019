@@ -63,10 +63,48 @@ namespace CourseApp
                 Console.WriteLine($"x={xB[i]} y={taskB[i]}");
             }
 
-            var item = new Platypus();
-            Console.WriteLine(item.View());
+            Console.WriteLine("Table info:"); 
 
-            Console.ReadLine();
+            List<Furniture> furniture = new List<Furniture>()
+            {
+                new Table(500, 120),
+                new Table(400, 400, "red"),
+                new Chair(100, 100),
+                new Chair(120, 120, "yellow"),
+                new Chair(100, 100, "red", 4),
+                new Chair(120, 120, "yellow", 2),
+                new Table(400, 400, countLegs: 3),
+            };
+
+            Console.WriteLine("Furniture before sort.");
+            for (var i = 0; i < furniture.Count; i++)
+            {
+                Console.WriteLine($"Furniture height = {furniture[i].Height} and weight = {furniture[i].Weight}");
+            }
+
+            Console.WriteLine("Sorted furniture.");
+            furniture.Sort();
+            for (var i = 0; i < furniture.Count; i++)
+            {
+                Console.WriteLine($"Furniture height = {furniture[i].Height} and weight = {furniture[i].Weight}");
+            }
+            
+            for (int i = 0; i < furniture.Count; i++)
+            {
+                furniture[i].Build();
+                Console.WriteLine(furniture[i].ToString());
+            }
+
+            try
+            {
+                furniture.Add(new Table(0, 12, null));
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine(exc.Message);
+            }
+
+            Console.ReadLine();   
         }
     }
 }
