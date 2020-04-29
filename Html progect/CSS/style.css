@@ -1,0 +1,110 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+body{
+	background-image: url("../style/222.png")
+}
+#block-body{
+	width: 1305px;
+	margin: 5px auto;
+	height: auto;
+}
+head{
+	width: 1305px;
+	height: 80px;
+}
+.top-menu {
+	width: 685px;
+	height: 85px;
+	float: left;
+	margin-top:9px;
+	margin-left: 255px;
+	margin-right: 145px;
+	background-color: black;
+	border-radius: 15px 15px 0px 0px;
+}
+.top-menu ul li{
+	list-style: none;
+	float: left;
+	text-align: center;
+}
+.top-menu ul li{
+	display: block;
+	text-decoration: none;
+	font-family: CURSIVE;
+	height: 55px;
+	padding-top: 30px;
+	padding-left: 70px;
+	padding-right: 70px;
+	cursor: pointer;
+	
+}
+.top-menu ul li a:hover{
+	 transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition:all 0.5s ease;
+    -moz-transition:all 0.5s ease;
+	 background: white;
+	 color: black;
+	 border-radius: 8px;
+	 
+}
+.top-menu ul li a{
+    text-decoration: none;
+	color: white;
+	font-size:20px;
+	padding: 5px;
+	
+}
+
+.Front {
+	width: 685px;
+	height: 430px;
+	float: left;
+	margin-top:5px;
+	margin-left: 255px;
+	margin-right: 145px;
+	background-color: #00FFFF;
+}
+
+.Front p{
+ text-decoration: none;
+ display: block;
+ font-size: 25px;
+ padding-left: 280px;
+ padding-top: 20px;
+}
+
+.Front d{
+ display: block;
+ font-size: 15px;
+ padding-left:35px;
+ padding-right:35px;
+ padding-top: 15px;
+ font-family: CURSIVE;
+ font-size: 17px;
+}
+
+
+.bot {
+	width: 685px;
+	height: 70px;
+	float: left;
+	margin-top:5px;
+	margin-bottom: 5px;
+	margin-left: 255px;
+	margin-right: 145px;
+	background-color: black;
+	border-radius: 0px 0px 15px 15px;
+}
+
+.bot z {
+	color: white;
+	padding-left: 44.5%;
+}
+
+
+	
