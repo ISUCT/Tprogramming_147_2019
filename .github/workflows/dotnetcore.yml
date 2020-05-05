@@ -15,9 +15,17 @@ jobs:
         dotnet-version: 2.1.802
     - name: Build with dotnet
       run: |
-        cd CourseApp 
+        cd CourseApp
         dotnet build --configuration Release
     - name: Run tests
       run: |
         cd CourseApp.Tests
+        dotnet test
+    - name: Build with dotnet
+      run: |
+        cd RPG
+        dotnet build --configuration Release
+    - name: Run tests
+      run: |
+        cd RPG.Tests
         dotnet test
