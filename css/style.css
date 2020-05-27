@@ -1,0 +1,20 @@
+div{
+ border: 10px solid #DEB887;
+ background-color: #E6E6FA;
+ text-decoration: none;
+ margin: 20px;
+ padding:50px;
+ border-radius:30px;
+ color:#D2691E;
+}
+.footer_social_icons{
+margin-left:500px;
+}
+.down_section{
+
+padding-left:50px;
+padding-right:50px;
+}	
+body{
+	background-color: #E6E6FA;
+}
