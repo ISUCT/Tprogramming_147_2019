@@ -1,4 +1,26 @@
 {
+
+  "folders": [
+    {
+      "name": "CourseApp",
+      "path": "CourseApp"
+    },
+    {
+      "name": "CourseApp.Tests",
+      "path": "CourseApp.Tests"
+    },
+    {
+      "name": "RPG",
+      "path": "RPG"
+    },
+    {
+      "name": "RPG.Tests",
+      "path": "RPG.Tests"
+    }
+  ],
+  "settings": {}
+}
+
 	"folders": [
 		{
 			"path": "CourseApp"
