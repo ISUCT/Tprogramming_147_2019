@@ -2,7 +2,7 @@ using System;
 
 namespace CourseApp
 {
-    public abstract class Animal
+    public abstract class Animal : IComparable<Animal>
     {
         private int age;
 
@@ -51,5 +51,10 @@ namespace CourseApp
         }
 
         public abstract string Voice();
+
+        public int CompareTo(Animal an)
+        {
+            return this.Age.CompareTo(an.Age);
+        }
     }
 }

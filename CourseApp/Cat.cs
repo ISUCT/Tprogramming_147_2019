@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CourseApp
 {
-    public class Cat : Animal
+    public class Cat : Animal, IFacts
     {
         public Cat()
         : this("Неизвестно")
@@ -58,5 +58,7 @@ namespace CourseApp
         {
             return "Meow";
         }
+
+        void IFacts.Facts() => Console.WriteLine("Сердце кошки бьется около 140 ударов в минуту.\nМяуканьем кошки пытаются обратить внимание человека.\n Усы, необходимы кошке для перемещения в пространстве.");
     }
 }
