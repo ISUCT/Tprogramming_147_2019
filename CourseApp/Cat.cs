@@ -4,6 +4,7 @@ using System.Text;
 
 namespace CourseApp
 {
+
     public class Cat : Animal, IFacts
     {
         public Cat()
