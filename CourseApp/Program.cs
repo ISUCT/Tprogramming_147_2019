@@ -7,8 +7,8 @@ namespace CourseApp
     {
         public static double MyFunction(double a, double x)
         {
-             var y = Math.Pow(Math.Log10(a + x), 2) / Math.Pow(a + x, 2);
-             return y;
+            var y = Math.Pow(Math.Log10(a + x), 2) / Math.Pow(a + x, 2);
+            return y;
         }
 
         public static List<double> TaskA(double a, double xn, double xk, double dx)
@@ -62,9 +62,10 @@ namespace CourseApp
 
             Console.WriteLine();
 
-            Animal[] masss = new Animal[2];
-            masss[0] = new Mouse("Larisa", 2, false, true);
-            masss[1] = new Cat("Kyza", 7, true, true);
+            Animal[] masss = new Animal[3];
+            masss[0] = new Cat("Kyza", 7, true, true);
+            masss[1] = new Mouse("Larisa", 2, false, true);
+            masss[2] = new Cat("Murzik", 4, true, false);
             foreach (var item in masss)
             {
                 Console.WriteLine(item.ToString());
@@ -72,6 +73,17 @@ namespace CourseApp
                 Console.WriteLine();
             }
 
+            Array.Sort(masss);
+            Console.WriteLine("Отсортированный по возрасту массив:");
+            foreach (Animal an in masss)
+            {
+                Console.WriteLine($"{an.Name} - {an.Age}");
+            }
+
+            Console.WriteLine("================================");
+
+            IFacts barsik = new Cat("Barsik", 5, true, true);
+            barsik.Facts();
             Console.ReadLine();
         }
     }
