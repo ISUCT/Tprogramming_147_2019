@@ -9,3 +9,14 @@ C:\Users\Влад\Desktop\GITINIT\Tprogramming_147_2019\CourseApp\obj\Debug\netc
 C:\Users\Влад\Desktop\GITINIT\Tprogramming_147_2019\CourseApp\obj\Debug\netcoreapp3.1\CourseApp.AssemblyInfo.cs
 C:\Users\Влад\Desktop\GITINIT\Tprogramming_147_2019\CourseApp\obj\Debug\netcoreapp3.1\CourseApp.dll
 C:\Users\Влад\Desktop\GITINIT\Tprogramming_147_2019\CourseApp\obj\Debug\netcoreapp3.1\CourseApp.pdb
+C:\Users\Елисей\Desktop\DD\Tprogramming_147_2019\CourseApp\bin\Debug\netcoreapp3.1\CourseApp.exe
+C:\Users\Елисей\Desktop\DD\Tprogramming_147_2019\CourseApp\bin\Debug\netcoreapp3.1\CourseApp.deps.json
+C:\Users\Елисей\Desktop\DD\Tprogramming_147_2019\CourseApp\bin\Debug\netcoreapp3.1\CourseApp.runtimeconfig.json
+C:\Users\Елисей\Desktop\DD\Tprogramming_147_2019\CourseApp\bin\Debug\netcoreapp3.1\CourseApp.runtimeconfig.dev.json
+C:\Users\Елисей\Desktop\DD\Tprogramming_147_2019\CourseApp\bin\Debug\netcoreapp3.1\CourseApp.dll
+C:\Users\Елисей\Desktop\DD\Tprogramming_147_2019\CourseApp\bin\Debug\netcoreapp3.1\CourseApp.pdb
+C:\Users\Елисей\Desktop\DD\Tprogramming_147_2019\CourseApp\obj\Debug\netcoreapp3.1\CourseApp.csprojAssemblyReference.cache
+C:\Users\Елисей\Desktop\DD\Tprogramming_147_2019\CourseApp\obj\Debug\netcoreapp3.1\CourseApp.AssemblyInfoInputs.cache
+C:\Users\Елисей\Desktop\DD\Tprogramming_147_2019\CourseApp\obj\Debug\netcoreapp3.1\CourseApp.AssemblyInfo.cs
+C:\Users\Елисей\Desktop\DD\Tprogramming_147_2019\CourseApp\obj\Debug\netcoreapp3.1\CourseApp.dll
+C:\Users\Елисей\Desktop\DD\Tprogramming_147_2019\CourseApp\obj\Debug\netcoreapp3.1\CourseApp.pdb
